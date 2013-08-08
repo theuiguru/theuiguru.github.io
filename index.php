@@ -9,8 +9,8 @@ html, body {margin:4em auto; max-width:600px; padding:10px; font-size:25px; font
 img {border:0; border-radius:100px;}
 footer, .footer {position:absolute; bottom:10px; right:10px;}
 </style></head><body><div class="footer"><a href="http://github.com/theuiguru"><img src="https://si0.twimg.com/profile_images/2220855315/CTProfilePic.jpg" width="44" alt=""/></a></div>
-<script type="text/javascript">
-var quote = new Array("Every protagonist of every story, show, or movie is the story of my life.", 
+<?php
+$quote = array("Every protagonist of every story, show, or movie is the story of my life.", 
 	"Intelligence is not a privilege, it's a gift, and you use it for the good of mankind.", 
 	"If you wanna win, you gotta fuel like a winner!", 
 	"Just Do It!", 
@@ -21,5 +21,7 @@ var quote = new Array("Every protagonist of every story, show, or movie is the s
 	"#Nerdgasm!", 
 	"#Timehop!", 
 	"#FunnyTruth!");
-var q=quote.length; var randomQuote=Math.round(Math.random()*(q-1)); document.writeln("<div align='center'>" + quote[randomQuote] + "</div>");
-</script></body></html>
+$q=count($quote);
+$randomQuote=Math.round(Math.rand()*(q-1));
+echo "<div align='center'>" . quote(randomQuote) . "</div>";
+?></body></html>
