@@ -8,7 +8,7 @@
 html, body {margin:4em auto; max-width:600px; padding:10px; font-size:25px; font-family:'Courier New', sans-serif; color:#f0ad4e; background-color:#d9534f;}
 img {border:0; border-radius:100px;}
 footer, .footer {position:absolute; bottom:10px; right:10px;}
-</style></head><body onload="changebg();"><div class="footer"><a href="http://github.com/theuiguru"><img src="https://si0.twimg.com/profile_images/2220855315/CTProfilePic.jpg" width="44" alt=""/></a></div>
+</style></head><body><div class="footer"><a href="http://github.com/theuiguru"><img src="https://si0.twimg.com/profile_images/2220855315/CTProfilePic.jpg" width="44" alt=""/></a></div>
 <script type="text/javascript">
 var quote = new Array("Every protagonist of every story, show, or movie is the story of my life.", 
 	"Intelligence is not a privilege, it's a gift, and you use it for the good of mankind.", 
@@ -22,12 +22,4 @@ var quote = new Array("Every protagonist of every story, show, or movie is the s
 	"#Timehop!", 
 	"#FunnyTruth!");
 var q=quote.length; var randomQuote=Math.round(Math.random()*(q-1)); document.writeln("<div align='center'>" + quote[randomQuote] + "</div>");
-
-var totalCount=3;
-function changebg() {
-	var num=Math.ceil(Math.random()*totalCount);
-	document.body.backgroundColor='#5cb85c'+num;
-	document.body.style.backgroundRepeat="no-repeat";
-	document.body.style.backgroundPosition="center";
-	document.body.style.backgroundAttachment="fixed";}
 </script></body></html>
