@@ -1,0 +1,6 @@
+html, body {margin:2em auto; max-width:600px; padding:10px; font-size:35px; font-family:'Just Me Again Down Here', Terminal, monospace !important; color:#5bc0de; background-color:#d43f3a;}
+img.fork-me {position:fixed; top:0; right:0; border:0;}
+img.me {border:0; border-radius:100%; width:50px;}
+footer > .footer {position:fixed; bottom:10px; right:20px;}
+.nav {position:absolute; bottom:10px; left:20px;}
+
