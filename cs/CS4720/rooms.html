@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--Assignment 3 | Author: Chris Thomas-->
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="Keywords" content="Manhattan, hotel, hotels, New York City, New York" />
+<meta name="Description" content="The Official Manhattan Hotel Website!" />
+<title>Manhattan Hotel | Rooms and Rates</title>
+<link rel="stylesheet" type="text/css" href="hotelstyles.css" />
+<script type="text/javascript" language="javascript"><!--
+function isDate(txtDate) {
+    var objDate,  // date object initialized from the txtDate string
+        mSeconds, // txtDate in milliseconds
+        day,
+        month,
+        year;
+    // date length should be 10 characters (no more no less)
+    if (txtDate.length !== 10) {
+        return false;
+    }
+    // third and sixth character should be '/'
+    if (txtDate.substring(2, 3) !== '/' || txtDate.substring(5, 6) !== '/') {
+        return false;
+    }
+    // extract month, day and year from the txtDate (expected format is mm/dd/yyyy)
+    // subtraction will cast variables to integer implicitly (needed for !== comparing)
+    month = txtDate.substring(0, 2) - 1; // because months in JS start from 0
+    day = txtDate.substring(3, 5) - 0;
+    year = txtDate.substring(6, 10) - 0;
+    // test year range
+    if (year < 1000 || year > 3000) {
+        return false;
+    }
+    // convert txtDate to milliseconds
+    mSeconds = (new Date(year, month, day)).getTime();
+    // initialize Date() object from calculated milliseconds
+    objDate = new Date();
+    objDate.setTime(mSeconds);
+    // compare input date and parts from Date() object if difference exists then date isn't valid
+    if (objDate.getFullYear() !== year ||
+        objDate.getMonth() !== month ||
+        objDate.getDate() !== day) {
+        return false;
+    }
+    return true;
+}
+function isBookingCheckInOutDate() {
+    var booking1 = document.getElementById("booking1").value;
+    var booking2 = document.getElementById("booking2").value;
+    var booking3 = document.getElementById("booking3").value;
+    var book1 = document.getElementById("book1");
+    var book2 = document.getElementById("book2");
+    var book3 = document.getElementById("book3");
+    var checkin;
+	var checkout;
+	var valid = true;
+
+    if(booking1<1 || booking1>10)
+    {
+    	book1.style.color = "red";
+		book1.style.fontWeight = "bold";
+    	book1.innerHTML = "*";
+    	valid = false;
+    }
+    if(booking2<1 || booking2>10)
+    {
+    	book2.style.color = "red";
+		book2.style.fontWeight = "bold";
+    	book2.innerHTML = "*";
+    }
+    if(booking3<1 || booking3>10)
+    {
+    	book3.style.color = "red";
+		book3.style.fontWeight = "bold";
+    	book3.innerHTML = "*";
+    }
+    if(isDate(document.getElementById("checkin").value))
+    {
+       checkin = new Date(document.getElementById("checkin").value);
+    }
+    else
+    {
+        document.getElementById("checkinlabel").style.color = "red";
+        document.getElementById("checkinlabel").style.fontWeight = "bold";
+    }
+    if(isDate(document.getElementById("checkout").value))
+    {
+       checkout = new Date(document.getElementById("checkout").value);
+    }
+    else
+    {
+        document.getElementById("checkoutlabel").style.color = "red";
+        document.getElementById("checkoutlabel").style.fontWeight = "bold";
+    }
+    //var today = new Date();
+    if(valid)
+    {
+    	calculate(booking1, booking2, booking3, checkin, checkout);
+    }
+
+}
+
+function calculate(booking1, booking2, booking3, checkin, checkout)
+{
+    if(booking1)
+        {
+            document.getElementById("type").value = "Master Suite";
+        }
+    //document.getElementById("type").value = "";
+}
+function confirmation() {
+    var ele = document.getElementById("confirmText");
+    if(ele.style.display == "block") {
+	    ele.style.display = "none";
+    }
+    else {
+	    ele.style.display = "block";
+    }
+    if(document.cookie)
+    {
+            var user = loadData();
+            document.getElementById("Dear " + user + " please confirm the reservation:");
+    }
+    else
+    {
+            var customer = getCookie();
+            document.getElementById("Dear " + customer + ", please confirm the reservation:");
+    }
+}
+function Cont() {
+    document.booking.cont.disabled=false;
+}
+function ContPay() {
+   window.open("payment.html", "toolbar=no", + "menubar=no, scrollBars=no");
+}
+var now = new Date(); // current date and time
+var hour = now.getHours(); // current hour
+function loadData() {
+	document.getElementById("date").innerHTML = "Today is " + now.toLocaleString();
+        var memInfo = document.getElementById("memberInfo");
+        var name = "";
+	 if (document.cookie)
+	 {
+		var myCookie = document.cookie;
+		var cookieTokens = myCookie.split( "=" );
+		name = unescape(cookieTokens[ 1 ]);
+     }
+	 else
+	 {
+	 	name = "";
+	 }
+    if ( hour < 12 )
+        memInfo.innerHTML = "Good Morning, " + name;
+	else
+	{
+		hour = hour - 12;
+		if ( hour < 6 )
+		   memInfo.innerHTML = "Good Afternoon, " + name;
+		else
+		  memInfo.innerHTML = "Good Evening, " + name;
+	}
+}
+function wrongPerson() {
+		document.cookie= "name=null;" + " expires=Thu, 01-Jan-95 00:00:01 GMT";
+		location.reload();
+}
+function register() {
+        var name = document.getElementById("name").value;
+        document.cookie = "name="+ escape(name);
+}
+// --></script></head><body onload="loadData()">
+<h1 class="title">Manhattan Hotel</h1>
+<h2>Rooms and Rates</h2>
+<h3 id="memberInfo"></h3>
+<p id="date"></p>
+
+<form name="booking"><table border="0" cellspacing="0" cellpadding="2" align="center" class="Design5" width="700px">
+<tr><th>Room Category:</th><th>Description:</th><th>Picture:</th><th>Rate:</th><th>Booking?</th></tr>
+<tr><td>Master Suite</td>
+<td>Includes master bedroom, living room, kitchen, etc.</td>
+<td><img src="images/room1.jpg" alt="Master Suite" width="200" height="110" title="Master Suite" /></td>
+<td>$800.00 for 1 night</td><td><input name="booking1" type="text" id="booking1" title="Booking 1" size="2" maxlength="10" /><label id="book1"></label></td></tr>
+
+<tr><td>Regular 2-Room Suite</td>
+<td>Includes living room, bedroom, etc.</td>
+<td><img src="images/room2.jpg" alt="Regular 2-Bedroom Suite" width="200" height="110" title="Regular 2-Bedroom Suite" /></td>
+<td>$100.00 for 1 night</td><td><input name="booking2" type="text" id="booking2" title="Booking 2" size="2" maxlength="10" /><label id="book2"></label></td></tr>
+
+<tr><td>Regular 1-Room Suite</td>
+<td>Includes 2 beds, tv, bath, etc.</td><td><img src="images/room3.jpg" width="200" height="110" alt="Regular 1-Bedroom Suite" title="Regular 1-Bedroom Suite" /></td>
+<td>$50.00 for 1 night</td><td><input name="booking3" type="text" id="booking3" title="Booking 3" size="2" maxlength="10" /><label id="book3"></label></td></tr>
+
+<tr><td colspan="2" align="center"><div  align="center">Check-In Date:<br />
+    <input type="text" name="checkin" title="Check-In Date" value="" maxlength="30" size="30" id="checkin" /><br/><label id="checkinlabel">(MM/DD/YYYY)</label></div></td>
+<td colspan="3" align="center"><div align="center">Check-Out Date:<br />
+    <input type="text" name="checkout" title="Check-Out Date" value="" maxlength="30" size="30" id="checkout" /><br/><label id="checkoutlabel">(MM/DD/YYYY)</label></div>
+</td></tr>
+
+<tr><td colspan="5" align="center">
+<input type="button" name="Submit" value="Submit" title="Submit" onclick="isBookingCheckInOutDate()" onsubmit="confirmation()" />
+
+<input type="reset" name="Reset" value="Clear" title="Clear" /></td></tr></table>
+</form></td></tr></table>
+
+
+<!--Confirmation Info-->
+<p><a id="Confirm" href="javascript:confirmation();">Reservation Confirmation</a></p>
+<div id="confirmText" style="display: none">
+<form name="confirm" id="confirm">
+<b>Room Type:</b> <label id="type"></label><br />
+<b>Quantity:</b> <label id="qty"></label><br />
+<b>Check-in Date:</b> <label id="checkinconfirm"></label><br />
+<b>Check-out Date:</b> <label id="checkoutconfirm"></label><br />
+<b>Subtotal Prices:</b> <label id="subtotal"></label><br />
+<b>Total Price (plus tax):</b> <label id="total"></label>
+<p align="center"><input type="submit" name="cont" value="Continue" title="Continue" disabled="true" onclick="ContPay()" /></p>
+</form></div>
+
+<table class="Design5" align="center">
+<tr><td><a href="index.html" title="Homepage"><img src="images/home.jpg" alt="Homepage" width="150" height="102" border="0" title="Homepage" /></a></td>
+<td><a href="rooms.html" title="Rooms and Rates"><img src="images/roomsNav.jpg" alt="Rooms and Rates" width="150" height="102" border="0" title="Rooms and Rates" /></a></td>
+<td><a href="details.html" title="Hotel Details"><img src="images/detailsNav.jpg" alt="Hotel Details" width="150" height="102" border="0" title="Hotel Details" /></a></td>
+<td><a href="entertainment.html" title="Entertainments"><img src="images/entertainmentNav.jpg" alt="Entertainments" width="150" height="102" border="0" title="Entertainments" /></a></td>
+<td><a href="feedback.html" title="Travelers Comments"><img src="images/feedbackNav.jpg" alt="Travelers Comments" width="150" height="102" border="0" title="Travelers Comments" /></a></td>
+<td><a href="login.html" title="Membership Login"><img src="images/loginNav.jpg" alt="Membership Login" width="150" height="102" border="0" title="Membership Login" /></a></td></tr>
+<tr><td align="center"><a href="index.html" title="Homepage">Home</a></td>
+<td align="center"><a href="rooms.html" title="Rooms and Rates">Rooms and Rates</a></td>
+<td align="center"><a href="details.html" title="Hotel Details">Hotel Details</a></td>
+<td align="center"><a href="entertainment.html" title="Entertainments">Entertainments</a></td>
+<td align="center"><a href="feedback.html" title="Travelers Comments">Travelers' Comments</a></td>
+<td align="center"><a href="login.html" title="Membership Login">Membership Login</a></td></tr>
+</table>
+
+<p class="footer">401 Seventh Avenue, New York, NY 10001 | Phone: (212) 555-1400 | E-Mail: <a href="mailto:info@manhattanhotel.com">info@manhattanhotel.com</a></p>
+</body></html>

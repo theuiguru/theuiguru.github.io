@@ -1,0 +1,57 @@
+/* Assignment 2 (CSS) | Author: Chris Thomas */
+
+body { background-color:#FFFFFF; color:#333333; font-family:Arial; font-size:Medium; text-align:center; }
+
+a:link { color: #FF0000; text-decoration: underline; text-align:center; }
+
+a:visited { color: #FF0000; text-decoration: underline; text-align:center; }
+
+a:hover  { color: #FF0000; text-decoration: none; text-align:center; }
+
+.footer { color: #333333; font-family: Verdana; font-size: 12px; text-align:center;}
+
+img {float:left}
+
+.intro {
+	font-size: Medium;
+	font-family: Arial;
+	color: #333333;
+	background-color: #FFFFFF;
+	margin: 0.7em;
+	padding: 0.5em;
+	width: 60%;
+	text-align:left;
+}
+
+.title {
+	color: #FF0000;
+	background-color:#FFFFFF;
+	width: 100%;
+	text-align: center;
+}
+
+/* Design 5 */
+table.Design5 {
+    border-spacing: 0px;
+    border-collapse: collapse;
+    border-top: 4px solid #EA9A1C;
+    border-bottom: 1px solid #EA9A1C;
+}
+table.Design5 th {
+    text-align: left;
+    font-weight: normal;
+    padding: 0.2em 0.5em;
+    border-top: 1px dotted #EA9A1C;
+}
+table.Design5 td {
+    text-align: left;
+    border-top: 1px dotted #EA9A1C;
+    padding: 0.2em 0.5em;
+}
+table.Design5 thead th {
+    text-align: center;
+    border-bottom: 1px solid #EA9A1C;
+}
+table.Design5 th.Corner {
+    text-align: left;
+}

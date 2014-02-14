@@ -1,0 +1,90 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="Keywords" content="Manhattan, hotel, hotels, New York City, New York" />
+<meta name="Description" content="The Official Manhattan Hotel Website!" />
+<title>Manhattan Hotel | Travelers' Comments</title>
+<!--Assignment 2 (CSS) | Author: Chris Thomas-->
+<link rel="stylesheet" type="text/css" href="hotelstyles.css" />
+<script type = "text/javascript"><!--
+var now = new Date(); // current date and time
+var hour = now.getHours(); // current hour
+function loadData() {
+	document.getElementById("date").innerHTML = "Today is " + now.toLocaleString();
+        var memInfo = document.getElementById("memberInfo");
+        var name = "";
+	 if (document.cookie)
+	 {
+		var myCookie = document.cookie;
+		var cookieTokens = myCookie.split( "=" );
+		name = unescape(cookieTokens[ 1 ]);
+     }
+	 else
+	 {
+	 	name = "";
+	 }
+    if ( hour < 12 )
+        memInfo.innerHTML = "Good Morning, " + name + ", Welcome to Manhattan Hotel!";
+	else
+	{
+		hour = hour - 12;
+		if ( hour < 6 )
+		   memInfo.innerHTML = "Good Afternoon, " + name + ", Welcome to Manhattan Hotel!";
+		else
+		  memInfo.innerHTML = "Good Evening, " + name + ", Welcome to Manhattan Hotel!";
+	}
+}
+function wrongPerson() {
+		document.cookie= "name=null;" + " expires=Thu, 01-Jan-95 00:00:01 GMT";
+		location.reload();
+}
+function register() {
+        var name = document.getElementById("name").value;
+        document.cookie = "name="+ escape(name);
+}
+// --></script></head><body onload="loadData()">
+<h1 class="title">Manhattan Hotel</h1>
+<h2>Travelers' Comments</h2>
+<h3 id="memberInfo"></h3>
+<p id="date"></p>
+
+<form action="" method="post" enctype="multipart/form-data" name="feedback" id="feedback" title="feedback">
+<table border="0" cellspacing="0" cellpadding="2" width="700px" class="Design5" align="center">
+<tr><td align="center"><b>Today's Date</b>:</td><td><input name="date" type="text" value="MM/DD/YYYY" size="30" maxlength="10" title="Today's Date" /></td></tr>
+<tr><td align="center"><b>How would you improve our hotel's services?</b></td>
+<td>
+<input name="excellent" type="checkbox" id="excellent" value="excellent" title="No Improvement" />No improvement at all!<br />
+<input name="good" type="checkbox" id="good" value="good" title="More Facilities" />More facilities?<br />
+<input name="poor" type="checkbox" id="poor" value="poor" title="More Benefits" />More benefits?<br />
+<input name="no" type="checkbox" id="no" value="no" title="Lower Prices" />Lower prices?</td></tr>
+
+<tr><td align="center"><b>How would you rate us?</b><br />(1 being poor, 5 being the best)</td>
+<td><p>
+  <label><input type="radio" name="Rating" value="radio" title="1" />1</label><br />
+  <label><input type="radio" name="Rating" value="radio" title="2" />2</label><br />
+  <label><input type="radio" name="Rating" value="radio" title="3" />3</label><br />
+  <label><input type="radio" name="Rating" value="radio" title="4" />4</label><br />
+  <label><input type="radio" name="Rating" value="radio" title="5" />5</label><br />
+</p></td></tr>
+<tr><td align="center"><b>Additional Comments:</b></td><td><textarea name="comments" cols="30" rows="4" title="Comments"></textarea></td></tr>
+<tr><td colspan="2"><div align="center"><input type="submit" name="Submit" value="Submit" title="Submit" /><input name="Reset" type="reset" value="Clear" title="Clear" /></div></td></tr>
+</table></form>
+
+<table class="Design5" align="center">
+<tr><td><a href="index.html" title="Homepage"><img src="images/home.jpg" alt="Homepage" width="150" height="102" border="0" title="Homepage" /></a></td>
+<td><a href="rooms.html" title="Rooms and Rates"><img src="images/roomsNav.jpg" alt="Rooms and Rates" width="150" height="102" border="0" title="Rooms and Rates" /></a></td>
+<td><a href="details.html" title="Hotel Details"><img src="images/detailsNav.jpg" alt="Hotel Details" width="150" height="102" border="0" title="Hotel Details" /></a></td>
+<td><a href="entertainment.html" title="Entertainments"><img src="images/entertainmentNav.jpg" alt="Entertainments" width="150" height="102" border="0" title="Entertainments" /></a></td>
+<td><a href="feedback.html" title="Travelers Comments"><img src="images/feedbackNav.jpg" alt="Travelers Comments" width="150" height="102" border="0" title="Travelers Comments" /></a></td>
+<td><a href="login.html" title="Membership Login"><img src="images/loginNav.jpg" alt="Membership Login" width="150" height="102" border="0" title="Membership Login" /></a></td></tr>
+
+<tr><td align="center"><a href="index.html" title="Homepage">Home</a></td>
+<td align="center"><a href="rooms.html" title="Rooms and Rates">Rooms and Rates</a></td>
+<td align="center"><a href="details.html" title="Hotel Details">Hotel Details</a></td>
+<td align="center"><a href="entertainment.html" title="Entertainments">Entertainments</a></td>
+<td align="center"><a href="feedback.html" title="Travelers Comments">Travelers' Comments</a></td>
+<td align="center"><a href="login.html" title="Membership Login">Membership Login</a></td></tr>
+</table>
+<p class="footer">401 Seventh Avenue, New York, NY 10001 | Phone: (212) 555-1400 | E-Mail: <a href="mailto:info@manhattanhotel.com">info@manhattanhotel.com</a></p>
+</body></html>

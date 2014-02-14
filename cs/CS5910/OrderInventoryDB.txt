@@ -1,0 +1,7 @@
+//The below 2 statements are created by Chris Thomas.
+
+String qty, price, oid, pid;
+String sql2 = "UPDATE orderitems SET Quantity = " + qty + "Price = " + price + "OID = " + oid + "PID = " + pid + "WHERE Quantity >= 0";
+
+Connection conn = DBUtil.getConn();
+ResultSet rs = DBUtil.executeQuery(conn, sql, sql2, productId);
