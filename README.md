@@ -2,19 +2,16 @@ theuiguru.github.com
 ====================
 My personal hub @ http://theuiguru.github.io
 
-# Think Bright, Think CT!
-
-<p>"Every protagonist of every story, show, or movie is the story of my life."</p>
-
-### CTs LIFE PRINCIPLES:
-1. "It only takes 1-RTT to attain happiness in life."
+### Think Bright, Think CT!
+1. "Every protagonist of every story, show, or movie is the story of my life."
+2. "It only takes 1-RTT to attain happiness in life."
 <code>if c is happy:
         if p && m are happy:
                 print c("HAPPY! HAPPY! HAPPY!")</code>
-2. [OBEY] + [WORK HARD] + [PRAY] = "Live long and prosper."
-3. "Life is definitely not easy, but then again it's not hard if you try."
-4. "If Someone's happiness is your happiness, then you really love them."
-5. "Be the person you want to find. Don't be a nickel out here looking for a dime."
+3. [OBEY] + [WORK HARD] + [PRAY] = "Live long and prosper."
+4. "Life is definitely not easy, but then again it's not hard if you try."
+5. "If Someone's happiness is your happiness, then you really love them."
+6. "Be the person you want to find. Don't be a nickel out here looking for a dime."
 
 ### ASAP! Always Say A Prayer:
 "God, our Father, If it is your will, walk through my house and take 
