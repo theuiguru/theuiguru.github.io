@@ -1,6 +1,6 @@
-theuiguru.github.com
+theuiguru.github.io
 ====================
-My personal hub @ http://theuiguru.github.io
+ct's github page
 
 ### Think Bright, Think CT!
 1. "Every protagonist of every story, show, or movie is the story of my life."
