@@ -20,14 +20,10 @@ family in Jesus name, Amen."
 
 ### JSFIDDLES:
 1. Name Tag - http://jsfiddle.net/mMHh9/
-2. CSS Buttons - http://jsfiddle.net/UpGcN/1
-3. Previous/Next Buttons - http://jsfiddle.net/wMJSn/
-4. News slider - http://jsfiddle.net/mTwqv/
-5. MGOCSMBQLI - http://jsfiddle.net/uev8K/
-6. CSS Slideshow - http://jsfiddle.net/haMs7/2/
-7. Audio - http://jsbin.com/iminoc
-8. Flickr API - http://jsfiddle.net/C7guQ/23/
-9. Google Fonts - http://jsfiddle.net/35Kvq/
-10. CSS Dropdown Menu - http://jsfiddle.net/qUHcM/
-11. The Lazy Eye of Sports - http://jsfiddle.net/KCj7V/embedded/result/
-12. Sprited image - http://jsfiddle.net/6XeGG/
+2. Previous/Next Buttons - http://jsfiddle.net/wMJSn/
+3. News slider - http://jsfiddle.net/mTwqv/
+4. MGOCSMBQLI - http://jsfiddle.net/uev8K/
+5. CSS Slideshow - http://jsfiddle.net/haMs7/2/
+6. Audio - http://jsbin.com/iminoc
+7. Flickr API - http://jsfiddle.net/C7guQ/23/
+8. Sprited image - http://jsfiddle.net/6XeGG/
