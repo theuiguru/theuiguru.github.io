@@ -1,8 +1,7 @@
 theuiguru.github.io
 ====================
-ct's github page
 
-### Think Bright, Think CT!
+#### Think Bright, Think CT!
 1. "Every protagonist of every story, show, or movie is the story of my life."
 2. "It only takes 1-RTT to attain happiness in life."
 <code>if c is happy:
@@ -16,7 +15,7 @@ ct's github page
 away all my worries and illnesses and please watch over and heal my 
 family in Jesus name, Amen."
 
-### JSFIDDLES:
+#### JSfiddles:
 1. Name Tag - http://jsfiddle.net/mMHh9/
 2. Previous/Next Buttons - http://jsfiddle.net/wMJSn/
 3. News slider - http://jsfiddle.net/mTwqv/
