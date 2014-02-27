@@ -22,7 +22,10 @@ function changeBg (images) {
     // generates a random integer between 0 and the length of the supplied array:
     var n = Math.floor(Math.random() * 5);
     // sets the background-image of the 'body' element:
-    document.body.style.background = 'url(' + images[n].src + ') no-repeat fixed center';
+    document.body.style.backgroundImage = 'url(' + images[n].src + ')';
+    document.body.style.backgroundRepeat="no-repeat";
+    document.body.style.backgroundPosition="center";
+    document.body.style.backgroundAttachment="fixed";
 } changeBg(images);</script></body></html>
 <!--Here is a special message delivered by the patriarch of the Molethu Family, Mr. John Varghese Molethu,
 to the family members at the American Molethu 1st Annual Reunion, of 2009, entitled "Molethu Meet in Virginia, U.S.A. - November 2009":
