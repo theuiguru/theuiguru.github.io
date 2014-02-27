@@ -13,13 +13,16 @@ h1 {position:relative; top:1em;}
 </div><script type="text/javascript">
   var images = [
   { src : 'http://theuiguru.github.io/molethu/family.jpg' },
-  { src : 'https://lh3.googleusercontent.com/-qaKJ-kebyJA/UgBtt_TXnWI/AAAAAAAACW0/-ZfQaWNhaLk/w1333-h889-no/IMG_3156.JPG'}
+  { src : 'https://lh3.googleusercontent.com/-qaKJ-kebyJA/UgBtt_TXnWI/AAAAAAAACW0/-ZfQaWNhaLk/w1333-h889-no/IMG_3156.JPG'},
+  { src : 'https://lh4.googleusercontent.com/-8D229IiJSdA/SxxjQYR-gCI/AAAAAAAAAaQ/zllLUrRTsz0/w771-h578-no/DSC00524.JPG'},
+  { src : 'https://lh3.googleusercontent.com/-w4UeyG9N97E/SxxjdH1iu0I/AAAAAAAAAak/o2zhbHnCoR8/w771-h578-no/DSC00533.JPG'},
+  { src : 'https://lh3.googleusercontent.com/-LYpV_4SlfTw/SxxjpHAC8JI/AAAAAAAAAa0/dqqBHl7ULPU/w771-h578-no/DSC00540.JPG'}
   ];
 function changeBg (images) {
     // generates a random integer between 0 and the length of the supplied array:
-    var n = Math.floor(Math.random() * 2),
-        // works out whether to use the 'textContent' or 'innerText' property:
-        textProperty = 'textContent' in document ? 'textContent' : 'innerText';
+    var n = Math.floor(Math.random() * 5),
+    // works out whether to use the 'textContent' or 'innerText' property:
+    //textProperty = 'textContent' in document ? 'textContent' : 'innerText';
     // sets the background-image of the 'body' element:
     document.body.style.backgroundImage = 'url(' + images[n].src + ')';
     document.body.style.backgroundRepeat="no-repeat";
