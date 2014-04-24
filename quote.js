@@ -4,9 +4,9 @@ var quote = new Array("Every protagonist of every story, show, or movie is the s
 	"Just Do It!", 
 	"That's what she said!", 
 	"The SOUL is the warrior's greatest weapon. He closes his eyes and reaches the heavens.", 
-	"#sweet!",
-	"#Timehop!",
-	"#sorry!", 
+	"sweeet!",
+	"Timehop!",
+	"sorry!", 
 	"Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. - @kylerichter", 
 	"A man loves his sweetheart the most, his wife the best, but his mother the longest...",
 	"No matter what role people play, they will always solve problems everyday. - Dr. Naresh N. Gupta",
@@ -58,6 +58,5 @@ var quote = new Array("Every protagonist of every story, show, or movie is the s
 	"On this Feast of Dormition, I ask myself: Would a Marthoma quarterback throw a 'Hail Mary?' - Steve Kurian",
 	"Making her smile is the way to her heart...or be lazy and just get her food."
 );
-var q=quote.length, 
-    randomQuote=Math.round(Math.random()*(q-1));
-document.writeln("<div align='center'>" + quote[randomQuote] + "</div>");
+var q=quote.length, rand=Math.floor(Math.random()*q);
+document.write(quote[rand]);
