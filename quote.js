@@ -59,4 +59,4 @@ var quote = new Array("Every protagonist of every story, show, or movie is the s
 	"Making her smile is the way to her heart...or be lazy and just get her food."
 );
 var q=quote.length, rand=Math.floor(Math.random()*q);
-document.write(quote[rand]);
+///document.write(quote[rand]);
