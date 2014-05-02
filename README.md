@@ -21,6 +21,5 @@ family in Jesus name, Amen."
 3. News slider - http://jsfiddle.net/mTwqv/
 4. MGOCSMBQLI - http://jsfiddle.net/uev8K/
 5. CSS Slideshow - http://jsfiddle.net/haMs7/2/
-6. Audio - http://jsbin.com/iminoc
-7. Flickr API - http://jsfiddle.net/C7guQ/23/
-8. Sprited image - http://jsfiddle.net/6XeGG/
+6. Flickr API - http://jsfiddle.net/C7guQ/23/
+7. Sprited image - http://jsfiddle.net/6XeGG/
