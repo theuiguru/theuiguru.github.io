@@ -4,12 +4,12 @@ html, body {font-family:sans-serif; font-size:12px;}
 h1 {color:#0066FF; font-size:35px;}
 b {color:#66CC00; font-size:16px;}
 img {border:0; max-width:70%;}
-.photos div {display:inline-block; vertical-align:top; list-style:none;}
+.flickr {display:inline-block; vertical-align:top; list-style:none;}
 </style></head><body>
 <h1><span class="name"></span>'s Social Media Data</h1><p><img src="" class="pic"></p>
 <h1>Where I live</h1><p><img src="http://maps.googleapis.com/maps/api/staticmap?center=7%20Albatross%20Road,%20Levittown,%20NY%2011756&zoom=15&size=280x100&maptype=roadmap&sensor=false" title="map"></p>
 <h1>My tweetFeed</h1><p class="tweets"></p>
-<h1>My Flickr Pics</h1><p class="photos"></p>
+<h1>My Flickr Pics</h1><p class="flickr"></p>
 <h1>CT checkins at...</h1><p class="places"></p><p><img src="https://playfoursquare.s3.amazonaws.com/press/logo/poweredByFoursquare_gray.png"></p>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script><script>
 var Info = {
@@ -35,7 +35,20 @@ var tweets = {
 		});
 	}
 };
-var photos = {
+$(function(){
+    var id='29049438@N07';
+    var limit ='16';
+    // Flickr Photostream feed link.
+    $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=" + id + "&lang=en-us&format=json&jsoncallback=?", 
+              function(data){$.each(data.items, function(i,item){
+                  // Number of thumbnails to show.
+                  if(i < limit){
+                      // Create images and append to div id flickr and wrap link around the image.
+                      $("<img/>").attr("src", item.media.m.replace('_m', '_s')).appendTo(".flickr").wrap("<a href='" + item.media.m.replace('_m', '_z') + "' name='"+ item.link + "' title='" +  item.title +"' target='_blank'></a>"); } 
+              });
+                            }); 
+});
+/*var photos = {
 	fetch: function(userID) {
 		var url = "http://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=d086a67b29242c389e9a4d98f65cb9d7&user_id=29049438%40N07&extras=url_s&per_page=4&page=1&format=json&nojsoncallback=1&auth_token=72157632980638031-cbd4a6ce31806441&api_sig=3648bb9081bebe39fe16886284e3522b",
 		count=4;
@@ -47,7 +60,7 @@ var photos = {
 			}
 		});
 	}
-};
+};*/
 var places = {
 	fetch: function() {
 		var url = "https://api.foursquare.com/v2/users/self/checkins?limit=10&oauth_token=3FLJTHPL4OHWMZO2G2DGJ2HPAJJPTPVCW0EEZX12PKV32GBS&v=20130312";
@@ -64,5 +77,5 @@ var places = {
 places.fetch("cthomas1211");
 Info.fetch("christhomas101");
 tweets.fetch("cthomas1211");
-photos.fetch("theuiguru");
+//photos.fetch("theuiguru");
 </script></body></html>
