@@ -56,7 +56,8 @@ var quote = new Array("Every protagonist of every story, show, or movie is the s
 	"I'm just happy she's happy",
 	"Champions are not made of muscle, they are made of heart. When your heart is into something, nothing can stop you!",
 	"On this Feast of Dormition, I ask myself: Would a Marthoma quarterback throw a 'Hail Mary?' - Steve Kurian",
-	"Making her smile is the way to her heart...or be lazy and just get her food."
+	"Making her smile is the way to her heart...or be lazy and just get her food.",
+	"May the fourth be with you."
 );
 var q=quote.length, rand=Math.floor(Math.random()*q);
 ///document.write(quote[rand]);
