@@ -12,7 +12,7 @@ theuiguru.github.io
 away all my worries and illnesses and please watch over and heal my 
 family in Jesus name, Amen."
 
-#### JSfiddles:
+#### fiddles:
 1. Name Tag - http://jsfiddle.net/mMHh9/
 2. Previous/Next Buttons - http://jsfiddle.net/wMJSn/
 3. News slider - http://jsfiddle.net/mTwqv/
