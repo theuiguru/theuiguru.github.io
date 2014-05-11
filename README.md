@@ -3,7 +3,7 @@ theuiguru.github.io
 
 #### Think Bright, Think CT!
 1. "Every protagonist of every story, show, or movie is the story of my life."
-2. "It only takes 1-RTT to attain happiness in life."
+2. "It only takes an infinite-RTT to attain happiness in life."
 3. [OBEY] + [WORK HARD] + [PRAY] = "Live long and prosper."
 4. "Life is definitely not easy, but then again it's not hard if you try."
 5. "If Someone's happiness is your happiness, then you really love them."
