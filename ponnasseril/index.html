@@ -21,11 +21,9 @@ input[type="button"]:hover {background:#47a447;}
 var images = new Array('family1.jpg', 'family2.jpg', 'family3.jpg', 'family4.jpg', 'https://farm3.staticflickr.com/2832/9722701498_3a6d32e779_b.jpg', 'https://farm8.staticflickr.com/7228/7193556688_31164673b9_b.jpg', 'https://farm5.staticflickr.com/4054/4477834904_d3e4f2565b_b.jpg');
 var n = Math.floor(Math.random() * images.length);
 document.querySelector(".rand").setAttribute('src', images[n]);
-
-var bgimg = new Array('family1.jpg', 'family2.jpg', 'family3.jpg', 'family4.jpg', 'http://distilleryimage5.ak.instagram.com/46cd61d6a94011e1989612313815112c_7.jpg',  'https://farm3.staticflickr.com/2868/13681077483_30da59941b_o.jpg', 'https://farm4.staticflickr.com/3784/9726283581_8ec20ff00c_b.jpg', 'https://farm3.staticflickr.com/2832/9723175626_e1817b613e_b.jpg', 'https://farm8.staticflickr.com/7416/9719947181_854931f0f7_b.jpg', 'https://farm3.staticflickr.com/2832/9722701498_3a6d32e779_b.jpg', 'https://farm8.staticflickr.com/7228/7193556688_31164673b9_b.jpg', 'https://farm5.staticflickr.com/4054/4477834904_d3e4f2565b_b.jpg');
+var bgimg = new Array('http://distilleryimage5.ak.instagram.com/46cd61d6a94011e1989612313815112c_7.jpg', 'https://farm3.staticflickr.com/2868/13681077483_30da59941b_o.jpg', 'https://farm4.staticflickr.com/3784/9726283581_8ec20ff00c_b.jpg', 'https://farm3.staticflickr.com/2832/9723175626_e1817b613e_b.jpg', 'https://farm8.staticflickr.com/7416/9719947181_854931f0f7_b.jpg');
 var b = Math.floor(Math.random() * bgimg.length);
 document.querySelector(".bgimg").style.backgroundImage = 'url(' + bgimg[b] + ')';
-
 function secretSanta() {
   var name = new Array('Sanu', 'Jwala', 'Ranjan', 'Roshan', 'Bavan', 'Anita', 'Swithin', 'Rena', 'Sona', 'Sherry', 'Shanu', 'Justin', 'Alex', 'Chris', 'Dinah', 'Priya', 'Christian', 'Manna', 'Sarah');
   var r = Math.floor(Math.random() * name.length);
