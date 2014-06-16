@@ -31,9 +31,11 @@ function secretSanta() {
   document.querySelector(".msg").innerHTML = "Hey " + santa + ", you've picked <b><u>" + name[r] + "</u></b> for secret santa 2014!";
 }
 function validate() {
-  var fname = document.querySelector(".fname").value;
+  var warn = document.querySelector(".msg"),
+  fname = document.querySelector(".fname").value;
   if(fname == "") {
-    alert("You need to enter a 'valid' cuz.");
+    //alert("You need to enter a 'valid' cuz.");
+    warn.innerHTML = "You need to enter a 'valid' cuz.";
     return false;
   } else { return secretSanta(); }
 }
