@@ -24,19 +24,20 @@ document.querySelector(".rand").setAttribute('src', images[n]);
 var bgimg = new Array('http://distilleryimage5.ak.instagram.com/46cd61d6a94011e1989612313815112c_7.jpg', 'https://farm3.staticflickr.com/2868/13681077483_30da59941b_o.jpg', 'https://farm4.staticflickr.com/3784/9726283581_8ec20ff00c_b.jpg', 'https://farm3.staticflickr.com/2832/9723175626_e1817b613e_b.jpg', 'https://farm8.staticflickr.com/7416/9719947181_854931f0f7_b.jpg');
 var b = Math.floor(Math.random() * bgimg.length);
 document.querySelector(".bgimg").style.backgroundImage = 'url(' + bgimg[b] + ')';
-function secretSanta() {
-  var name = new Array('Sanu', 'Jwala', 'Ranjan', 'Roshan', 'Bavan', 'Anita', 'Swithin', 'Rena', 'Sona', 'Sherry', 'Shanu', 'Justin', 'Alex', 'Chris', 'Dinah', 'Priya', 'Christian', 'Manna', 'Sarah');
-  var r = Math.floor(Math.random() * name.length);
-  var santa=document.santa.name.value;
-  document.querySelector(".msg").innerHTML = "Hey " + santa + ", you've picked <b><u>" + name[r] + "</u></b> for secret santa 2014!";
-}
 function validate() {
   var warn = document.querySelector(".msg"),
   fname = document.querySelector(".fname").value;
   if(fname == "") {
     //alert("You need to enter a 'valid' cuz.");
-    warn.innerHTML = "You need to enter a 'valid' cuz.";
+    warn.innerHTML = "Invalid cuz.";
+    warn.style.color = "#cc3333";
     return false;
   } else { return secretSanta(); }
+}
+function secretSanta() {
+  var name = new Array('Sanu', 'Jwala', 'Ranjan', 'Roshan', 'Bavan', 'Anita', 'Swithin', 'Rena', 'Sona', 'Sherry', 'Shanu', 'Justin', 'Alex', 'Chris', 'Dinah', 'Priya', 'Christian', 'Manna', 'Sarah');
+  var r = Math.floor(Math.random() * name.length);
+  var santa=document.santa.name.value;
+  document.querySelector(".msg").innerHTML = "Hey " + santa + ", you've picked <b><u>" + name[r] + "</u></b> for secret santa 2014!";
 }
 </script></body></html>
