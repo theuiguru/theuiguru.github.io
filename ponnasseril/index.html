@@ -38,14 +38,14 @@ function secretSanta() {
   var name = new Array('Sanu', 'Jwala', 'Ranjan', 'Roshan', 'Bavan', 'Anita', 'Swithin', 'Rena', 'Sona', 'Sherry', 'Shanu', 'Justin', 'Alex', 'Chris', 'Dinah', 'Priya', 'Christian', 'Manna', 'Sarah');
   var r = Math.floor(Math.random() * name.length);
   var santa=document.santa.name.value;
-  var j=0;
+  /*var j=0;
   for(var i=0; i<name.length; i++) {
     if(name[i] !== j) {
       j++;
     } else {
       return true;
     }
-  }
+  }*/
   document.querySelector(".msg").innerHTML = "Hey " + santa + ", you've picked <b><u>" + name[r] + "</u></b> for secret santa 2014!";
 }
 </script></body></html>
