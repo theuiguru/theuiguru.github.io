@@ -32,10 +32,10 @@ function blogFeed() {
   feedControl.addFeed("http://ponnasseril.blogspot.com/feeds/posts/default");
   feedControl.draw(document.querySelector(".feed"));
 } google.setOnLoadCallback(blogFeed);
-var images = new Array('family1.jpg', 'family2.jpg', 'family3.jpg', 'family4.jpg', 'https://farm3.staticflickr.com/2832/9722701498_3a6d32e779_b.jpg', 'https://farm8.staticflickr.com/7228/7193556688_31164673b9_b.jpg', 'https://farm5.staticflickr.com/4054/4477834904_d3e4f2565b_b.jpg', 'https://www.dropbox.com/s/git357aft0uov5w/DSC_3480.JPG', 'https://dl-web.dropbox.com/get/CP%202014/DSC_3480.JPG');
+var images = new Array('family1.jpg', 'family2.jpg', 'family3.jpg', 'family4.jpg', 'https://farm3.staticflickr.com/2832/9722701498_3a6d32e779_b.jpg', 'https://farm8.staticflickr.com/7228/7193556688_31164673b9_b.jpg', 'https://farm5.staticflickr.com/4054/4477834904_d3e4f2565b_b.jpg', 'https://photos-1.dropbox.com/t/0/AABQ_7e_Q4kQY6xSbvyUb06e8HAhcdj7B8eF8Aie1WYQMw/12/119917917/jpeg/1024x768/3/1407250800/0/2/DSC_3480.JPG/CQt8h0Y3Nk-goYq1HYcboOQFkxb5qXe06O924m_KcGg');
 var n = Math.floor(Math.random() * images.length);
 document.querySelector(".rand").setAttribute('src', images[n]);
-var bgimg = new Array('http://distilleryimage5.ak.instagram.com/46cd61d6a94011e1989612313815112c_7.jpg', 'https://farm3.staticflickr.com/2868/13681077483_30da59941b_o.jpg', 'https://farm4.staticflickr.com/3784/9726283581_8ec20ff00c_b.jpg', 'https://farm3.staticflickr.com/2832/9723175626_e1817b613e_b.jpg', 'https://farm8.staticflickr.com/7416/9719947181_854931f0f7_b.jpg', 'https://www.dropbox.com/s/git357aft0uov5w/DSC_3480.JPG', 'https://dl-web.dropbox.com/get/CP%202014/DSC_3480.JPG');
+var bgimg = new Array('http://distilleryimage5.ak.instagram.com/46cd61d6a94011e1989612313815112c_7.jpg', 'https://farm3.staticflickr.com/2868/13681077483_30da59941b_o.jpg', 'https://farm4.staticflickr.com/3784/9726283581_8ec20ff00c_b.jpg', 'https://farm3.staticflickr.com/2832/9723175626_e1817b613e_b.jpg', 'https://farm8.staticflickr.com/7416/9719947181_854931f0f7_b.jpg', 'https://photos-1.dropbox.com/t/0/AABQ_7e_Q4kQY6xSbvyUb06e8HAhcdj7B8eF8Aie1WYQMw/12/119917917/jpeg/1024x768/3/1407250800/0/2/DSC_3480.JPG/CQt8h0Y3Nk-goYq1HYcboOQFkxb5qXe06O924m_KcGg');
 var b = Math.floor(Math.random() * bgimg.length);
 document.querySelector(".bgimg").style.backgroundImage = 'url(' + bgimg[b] + ')';
 function validate() {
