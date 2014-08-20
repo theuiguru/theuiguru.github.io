@@ -23,7 +23,7 @@
 		};
 		
 		//open request
-		xhr.open("GET", "ajax.txt", true);
+		xhr.open("GET", "http://theuiguru.github.io/ponnasseril/blog.txt", true);
 		
 		//send request
 		xhr.send(null);
