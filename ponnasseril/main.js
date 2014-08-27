@@ -13,12 +13,6 @@
 		xhr.onreadystatechange = function() {
 			if((xhr.readyState == 4) && (xhr.status == 200 || xhr.status == 304)) {
 				xhr.responseText;
-
-				var body = document.getElementsByTagName("body");
-				var p = document.createElement("p");
-				var pText = document.createTextNode(xhr.responseText);
-				p.appendChild(pText);
-				body.appendChild(p);
 			}
 		};
 		
