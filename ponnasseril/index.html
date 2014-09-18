@@ -26,41 +26,6 @@ jQuery(document).ready(function() {
 		jQuery(".feed").animate(1000).slideToggle("5000");
 	});
 });
-  
-(function() {
-	var link = document.querySelector(".more")[0];
-	link.onclick = function() {
-		var xhr = new XMLHttpRequest(); //XHR Object
-		
-		//handle the 'onreadystatechange' event
-		//xhr.readyState property values
-		// 0 = uninitialized
-		// 1 = loading
-		// 2 = loaded
-		// 3 = interactive
-		// 4 = complete
-		xhr.onreadystatechange = function() {
-			if((xhr.readyState == 4) && (xhr.status == 200 || xhr.status == 304)) {
-				xhr.responseText;
-
-				/*var body = document.querySelector(".feed");
-				var p = document.createElement("p");
-				var pText = document.createTextNode(xhr.responseText);
-				p.appendChild(pText);
-				body.appendChild(p);*/
-			}
-		};
-		
-		//open request
-		xhr.open("GET", "http://theuiguru.github.io/ponnasseril/blog.xml", true);
-		
-		//send request
-		xhr.send(null);
-		
-		return false;
-	};	
-})();
-  
 var images = new Array('https://farm4.staticflickr.com/3837/14653458499_5078507038_b.jpg', 'https://farm5.staticflickr.com/4147/5202169929_8ae5e11278_b.jpg', 'https://farm9.staticflickr.com/8213/8308705647_0f32ff2129_o.jpg', 'https://farm6.staticflickr.com/5575/14817130336_f9bcc19451_o.jpg', 'https://farm3.staticflickr.com/2832/9722701498_3a6d32e779_b.jpg', 'https://farm8.staticflickr.com/7228/7193556688_31164673b9_b.jpg', 'https://farm5.staticflickr.com/4054/4477834904_d3e4f2565b_b.jpg', 'https://farm6.staticflickr.com/5567/14653458429_c0a6d0fc2d_b.jpg');
 var n = Math.floor(Math.random() * images.length);
 document.querySelector(".rand").setAttribute('src', images[n]);
@@ -78,9 +43,12 @@ function validate() {
   } else { return secretSanta(); }
 }
 function secretSanta() {
-  var name = new Array('Sanu', 'Jwala', 'Ranjan', 'Roshan', 'Bavan', 'Anita', 'Swithin', 'Rena', 'Sona', 'Sherry', 'Shanu', 'Justin', 'Alex', 'Chris', 'Dinah', 'Priya', 'Christian', 'Manna', 'Sarah');
-  var r = Math.floor(Math.random() * name.length);
-  var santa=document.santa.name.value;
-  document.querySelector(".msg").innerHTML = "Hey " + santa + ", you've picked <b><u>" + name[r] + "</u></b> for secret santa 2014!";
+  var cuzinz = ['Sanu', 'Jwala', 'Ranjan', 'Roshan', 'Bavan', 'Anita', 'Swithin', 'Rena', 'Sona', 'Sherry', 'Shanu', 'Justin', 'Alex', 'Chris', 'Dinah', 'Priya', 'Christian', 'Manna', 'Sarah'];
+  for(var i=0; i<cuzinz.length; i+=1) {
+  	console.log(cuzinz[i]);
+  }
+  var r = Math.floor(Math.random() * cuzinz.length);
+  var santa_name=document.santa.cuzinz.value;
+  document.querySelector(".msg").innerHTML = "Hey " + santa_name + ", you've picked <b><u>" + cuzinz[r] + "</u></b> for secret santa 2014!";
 }
 </script></body></html>
