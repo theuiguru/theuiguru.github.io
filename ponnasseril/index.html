@@ -40,15 +40,33 @@ function validate() {
     warn.innerHTML = "Invalid cuz.";
     warn.style.color = "#cc3333";
     return false;
-  } else { return secretSanta(); }
-}
+  } else {
+    return secretSanta();
+  } //end else
+} //end validate();
 function secretSanta() {
-  var cuzinz = ['Sanu', 'Jwala', 'Ranjan', 'Roshan', 'Bavan', 'Anita', 'Swithin', 'Rena', 'Sona', 'Sherry', 'Shanu', 'Justin', 'Alex', 'Chris', 'Dinah', 'Priya', 'Christian', 'Manna', 'Sarah'];
-  for(var i=0; i<cuzinz.length; i+=1) {
-  	console.log(cuzinz[i]);
-  }
-  var r = Math.floor(Math.random() * cuzinz.length);
-  var santa_name=document.santa.cuzinz.value;
-  document.querySelector(".msg").innerHTML = "Hey " + santa_name + ", you've picked <b><u>" + cuzinz[r] + "</u></b> for secret santa 2014!";
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if(xhr.readyState === 4) {
+      var cuzinz = JSON.parse(xhr.responseText);
+      //var statusHTML = '<ul class="bulleted">';
+      for(var i=0; i<cuzinz.length; i+=1) {
+        if(cuzinz[i].name === cuzinz[i]) {
+          var r = Math.floor(Math.random() * cuzinz.length);
+          var santa_name=document.santa.cuzinz.value;
+          document.querySelector(".msg").innerHTML = "Hey " + santa_name + ", you've picked <b><u>" + cuzinz[r] + "</u></b> for secret santa 2014!";
+        } else {
+          return validate();
+        }
+      }
+    }
+  };
+  xhr.open('GET', 'http://theuiguru.github.io/ponnasseril/cuzinz.json');
+  xhr.send();
+  /*var cuzinz = ['Sanu', 'Jwala', 'Ranjan', 'Roshan', 'Bavan', 'Anita', 'Swithin', 'Rena', 'Sona', 'Sherry', 'Shanu', 'Justin', 'Alex', 'Chris', 'Dinah', 'Priya', 'Christian', 'Manna', 'Sarah'];
+      for(var i=0; i<cuzinz.length; i+=1) {
+        cuzinz[i];
+      }
+      */
 }
 </script></body></html>
