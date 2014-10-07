@@ -40,15 +40,20 @@ function validate() {
     warn.innerHTML = "Invalid cuz.";
     warn.style.color = "#cc3333";
     return false;
-  } else {
-    return secretSanta();
-  } //end else
-} //end validate();
+  } else { return secretSanta(); }
+}
 function secretSanta() {
-  var cuzinz = ['Sanu', 'Jwala', 'Ranjan', 'Roshan', 'Bavan', 'Anita', 'Swithin', 'Rena', 'Sona', 'Sherry', 'Shanu', 'Justin', 'Alex', 'Chris', 'Dinah', 'Priya', 'Christian', 'Manna', 'Sarah'];
-  var r = Math.floor(Math.random() * cuzinz.length);
-  var santa_name=document.santa.cuzinz.value;
-  document.querySelector(".msg").innerHTML = "Hey " + santa_name + ", you've picked <b><u>" + cuzinz[r] + "</u></b> for secret santa 2014!";
-  // for(var i=0; i<cuzinz.length; i+=1) { cuzinz[i]; }
+  var name = ['Sanu', 'Jwala', 'Ranjan', 'Roshan', 'Bavan', 'Anita', 'Swithin', 'Rena', 'Sona', 'Sherry', 'Shanu', 'Justin', 'Alex', 'Chris', 'Dinah', 'Priya', 'Christian', 'Manna', 'Sarah'];
+  var r = Math.floor(Math.random() * name.length);
+  var santa=document.santa.name.value;
+  /*var j=0;
+  for(var i=0; i<name.length; i++) {
+    if(name[i] !== j) {
+      j++;
+    } else {
+      return true;
+    }
+  }*/
+  document.querySelector(".msg").innerHTML = "Hey " + santa + ", you've picked <b><u>" + name[r] + "</u></b> for secret santa 2014!";
 }
 </script></body></html>
