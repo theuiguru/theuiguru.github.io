@@ -43,6 +43,13 @@ function validate() {
   } else { return secretSanta(); }
 }
 function secretSanta() {
+  /*
+    CUZINZ Secret Santa Checklist:
+    1. No cousin outside the array should be permitted to enter their name.
+    2. No redundancy (aka you can't pick yourself).
+    3. Spouse != Spouse.
+    4. Sibling != Sibling.
+  */
   var name = ['Sanu', 'Jwala', 'Ranjan', 'Roshan', 'Bavan', 'Anita', 'Swithin', 'Rena', 'Sona', 'Sherry', 'Shanu', 'Justin', 'Alex', 'Chris', 'Dinah', 'Priya', 'Christian', 'Manna', 'Sarah'];
   var r = Math.floor(Math.random() * name.length);
   var santa=document.santa.name.value;
