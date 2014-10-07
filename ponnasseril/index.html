@@ -45,12 +45,10 @@ function validate() {
   } //end else
 } //end validate();
 function secretSanta() {
-	var cuzinz = ['Sanu', 'Jwala', 'Ranjan', 'Roshan', 'Bavan', 'Anita', 'Swithin', 'Rena', 'Sona', 'Sherry', 'Shanu', 'Justin', 'Alex', 'Chris', 'Dinah', 'Priya', 'Christian', 'Manna', 'Sarah'];
-	var r = Math.floor(Math.random() * cuzinz.length);
-	var santa_name=document.santa.cuzinz.value;
-	document.querySelector(".msg").innerHTML = "Hey " + santa_name + ", you've picked <b><u>" + cuzinz[r] + "</u></b> for secret santa 2014!";
-	for(var i=0; i<cuzinz.length; i+=1) {
-		cuzinz[i];
-	}
+  var cuzinz = ['Sanu', 'Jwala', 'Ranjan', 'Roshan', 'Bavan', 'Anita', 'Swithin', 'Rena', 'Sona', 'Sherry', 'Shanu', 'Justin', 'Alex', 'Chris', 'Dinah', 'Priya', 'Christian', 'Manna', 'Sarah'];
+  var r = Math.floor(Math.random() * cuzinz.length);
+  var santa_name=document.santa.cuzinz.value;
+  document.querySelector(".msg").innerHTML = "Hey " + santa_name + ", you've picked <b><u>" + cuzinz[r] + "</u></b> for secret santa 2014!";
+  // for(var i=0; i<cuzinz.length; i+=1) { cuzinz[i]; }
 }
 </script></body></html>
