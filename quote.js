@@ -60,4 +60,3 @@ var quote = new Array("Every protagonist of every story, show, or movie is the s
 	"May the fourth be with you."
 );
 var q=quote.length, rand=Math.floor(Math.random()*q);
-///document.write(quote[rand]);
