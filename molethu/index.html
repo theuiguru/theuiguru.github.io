@@ -10,9 +10,29 @@ footer > .footer {position:fixed; bottom:10px; right:10px; color:#fff; font-size
 h1 {margin-top:30px; font-weight:500; font-size:7em;}
 h2 {font-weight:500; font-size:4em;} h2 > a {color:#cc3333;}
 </style></head><body><div class="container"><h1 onclick="location.reload();">Molethu Family</h1>
-<h2><a href="http://groups.google.com/group/molethu">Join Our Family Forum!</a></h2>
+<h2><div id="countdown"></div><a href="http://groups.google.com/group/molethu">Join Our Family Forum!</a></h2>
 <footer><div class="footer"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ftiny.cc%2Fmolethu&amp;layout=button&amp;action=like&amp;show_faces=true&amp;share=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:20px; width:100px;" allowTransparency="true"></iframe><br/>Made with &#x2665;</div></footer></div><script type="text/javascript">
+function countdown() {
+  now = new Date();
+  kickoff = Date.parse("July 31, 2015 04:00:00");
+  diff = kickoff - now;
+  days = Math.floor( diff / (1000*60*60*24) );
+  hours = Math.floor( diff / (1000*60*60) );
+  mins = Math.floor( diff / (1000*60) );
+  secs = Math.floor( diff / 1000 );
+  dd = days;
+  hh = hours - days  * 24;
+  mm = mins  - hours * 60;
+  ss = secs  - mins  * 60;
+    document.getElementById("countdown").innerHTML =
+        dd + ' days ' +
+        hh + ' hours ' +
+        mm + ' minutes ' +
+        ss + ' seconds' + ' \'til our family reunion!';
+} setInterval(countdown, 1000 );
+
 var images = new Array('http://farm6.staticflickr.com/5146/5551452451_14e545d804_o.png', 'https://lh3.googleusercontent.com/-qaKJ-kebyJA/UgBtt_TXnWI/AAAAAAAACW0/-ZfQaWNhaLk/w1333-h889-no/IMG_3156.JPG', 'https://lh4.googleusercontent.com/-8D229IiJSdA/SxxjQYR-gCI/AAAAAAAAAaQ/zllLUrRTsz0/w771-h578-no/DSC00524.JPG', 'https://lh3.googleusercontent.com/-w4UeyG9N97E/SxxjdH1iu0I/AAAAAAAAAak/o2zhbHnCoR8/w771-h578-no/DSC00533.JPG', 'https://lh3.googleusercontent.com/-LYpV_4SlfTw/SxxjpHAC8JI/AAAAAAAAAa0/dqqBHl7ULPU/w771-h578-no/DSC00540.JPG');
+
 function changeBg (images) {
     var n = Math.floor(Math.random() * images.length); //generates a random integer between 0 and the length of the supplied array.
     document.body.style.backgroundImage = 'url(' + images[n] + ')'; //sets the background-image of the 'body'.
