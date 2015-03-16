@@ -15,7 +15,7 @@ input[type="submit"]:hover {background:#47a447;}
 .bgimg {position:absolute; left:0; right:0; display:block; background:no-repeat center fixed; background-size:cover; width:100%; height:100%; -webkit-filter:blur(10px); -moz-filter:blur(5px); -o-filter:blur(5px); -ms-filter:blur(5px); filter:blur(5px);}
 .msg {margin-top:10px; font-size:18px; color:#0099ff;} .feed {display:none; text-align:justify;} .more {display:block; font-size:24px;}
 @-moz-keyframes snow{0%{background-position:0px 0px, 0px 0px, 0px 0px}100%{background-position:500px 1000px, 400px 400px, 300px 300px}}@-webkit-keyframes snow{0%{background-position:0px 0px, 0px 0px, 0px 0px}100%{background-position:500px 1000px, 400px 400px, 300px 300px}}@keyframes snow{0%{background-position:0px 0px, 0px 0px, 0px 0px}100%{background-position:500px 1000px, 400px 400px, 300px 300px}}
-</style></head><body><div class="bgimg"></div><div class="container"><img src="" class="rand" data-video="http://www.youtube.com/embed/86oW1NtYnmU?autoplay=1&controls=0&showinfo=0"><section><form name="santa" onsubmit="event.preventDefault(); return validate();"><input type="text" name="name" class="fname" placeholder="Your first name"><!--<input type="submit" value="YANKEE SWAP!">--></form><div class="msg"></div>
+</style></head><body><div class="bgimg"></div><div class="container"><img src="" class="rand" data-video="http://www.youtube.com/embed/86oW1NtYnmU?autoplay=1&controls=0&showinfo=0"><section><form name="santa" onsubmit="secretSanta();"><input type="text" name="name" class="fname" placeholder="Your first name"><!--<input type="submit" value="YANKEE SWAP!">--></form><div class="msg"></div>
 <p><a href="#" class="more">Read more...</a></p><div class="feed"><p>Over the years, our family has grown spiritually and physically with God. Being the first generation of our family born in America, we have adjusted to the American style of life yet have kept the Indian traditions. Some of our family still remains in our home country of India but the rest live right here in America. We hope you enjoy this website and come back soon.</p><p>Our family history started from Mr. Philip M. Ponnasseril and Mrs. Aleykutty Philips in Vilayil Bunagalow, Kurathikadu, Kerala, in India. Wonder if you people knew that the Ponnaseril family name is not restricted to Vilayil Bunagalow, Kurathikadu. Appachen had elder brothers , two younger brothers, and a sister whose children and grand children are very accomplished.</p></div></section></div><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 jQuery(document).ready(function() {
@@ -33,25 +33,24 @@ document.querySelector(".rand").setAttribute('src', images[n]);
 var bgimg = new Array('http://distilleryimage5.ak.instagram.com/46cd61d6a94011e1989612313815112c_7.jpg', 'https://farm3.staticflickr.com/2868/13681077483_30da59941b_o.jpg', 'https://farm4.staticflickr.com/3784/9726283581_8ec20ff00c_b.jpg', 'https://farm3.staticflickr.com/2832/9723175626_e1817b613e_b.jpg', 'https://farm8.staticflickr.com/7416/9719947181_854931f0f7_b.jpg', 'https://farm6.staticflickr.com/5567/14653458429_c0a6d0fc2d_b.jpg');
 var b = Math.floor(Math.random() * bgimg.length);
 document.querySelector(".bgimg").style.backgroundImage = 'url(' + bgimg[b] + ')';
-function validate() {
-  var warn = document.querySelector(".msg"),
-  fname = document.querySelector(".fname").value;
-  if(fname == "") {
-    //alert("You need to enter a 'valid' cuz.");
-    warn.innerHTML = "Invalid cuz.";
-    warn.style.color = "#cc3333";
-    return false;
-  } else { return secretSanta(); }
-}
 function secretSanta() {
+  event.preventDefault();
 /* CUZINZ Secret Santa Checklist:
 	1. No cousin outside the array should be permitted to enter their name.
 	2. No redundancy (aka you can't pick yourself).
 	3. Spouse != Spouse.
 	4. Sibling != Sibling.
 */
-  var name = ['Sanu', 'Jwala', 'Ranjan', 'Roshan', 'Swithin', 'Rena', 'Shanu', 'Justin', 'Alex', 'Chris', 'Dinah', 'Priya', 'Christian', 'Manna', 'Sarah'];
-  var r = Math.floor(Math.random() * name.length);
-  var santa=document.santa.name.value;
-  document.querySelector(".msg").innerHTML = "Hey " + santa + ", you've picked <b><u>" + name[r] + "</u></b> for secret santa 2014!";
+  var name = ['Sanu', 'Jwala', 'Ranjan', 'Roshan', 'Swithin', 'Rena', 'Shanu', 'Justin', 'Alex', 'Chris', 'Dinah', 'Priya', 'Christian', 'Manna', 'Sarah'],
+  r = Math.floor(Math.random() * name.length),
+  santa=document.santa.name.value,
+  msg = document.querySelector(".msg").innerHTML = "Hey " + santa + ", you've picked <b><u>" + name[r] + "</u></b> for secret santa 2014!",
+  warn = document.querySelector(".msg"),
+  fname = document.querySelector(".fname").value;
+  if(fname === "") {
+    //alert("You need to enter a 'valid' cuz.");
+    warn.innerHTML = "Invalid cuz.";
+    warn.style.color = "#cc3333";
+    return false;
+  } else { return msg; }
 }</script></body></html>
