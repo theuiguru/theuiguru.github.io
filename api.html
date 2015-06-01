@@ -54,7 +54,7 @@ var places = {
 			var places = json.response.checkins.items,
 				limit = 10;
 			for(var i=0; i<limit; i++) {
-				$('.places').append('<p><span>' + places[i].venue.name + '</span>; ' + places[i].venue.location.city + ', ' + places[i].venue.location.state + places[i].venue.categories.name + '</p>');
+				$('.places').append('<p><span>' + places[i].venue.name + '</span>; ' + places[i].venue.location.city + ', ' + places[i].venue.location.state + ' ' + places[i].venue.categories.name + '</p>');
 			}
 		});
 	}
