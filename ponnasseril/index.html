@@ -27,10 +27,10 @@ $('.rand').click(function(){
   video = '<iframe src="'+ $(this).attr('data-video') +' width="500" height="300" frameborder="0""></iframe>';
   $(this).replaceWith(video);
 });
-var images = new Array('https://farm4.staticflickr.com/3837/14653458499_5078507038_b.jpg', 'https://farm5.staticflickr.com/4147/5202169929_8ae5e11278_b.jpg', 'https://farm9.staticflickr.com/8213/8308705647_0f32ff2129_o.jpg', 'https://farm6.staticflickr.com/5575/14817130336_f9bcc19451_o.jpg', 'https://farm3.staticflickr.com/2832/9722701498_3a6d32e779_b.jpg', 'https://farm8.staticflickr.com/7228/7193556688_31164673b9_b.jpg', 'https://farm5.staticflickr.com/4054/4477834904_d3e4f2565b_b.jpg', 'https://farm6.staticflickr.com/5567/14653458429_c0a6d0fc2d_b.jpg');
+var images = new Array('https://farm4.staticflickr.com/3837/14653458499_5078507038_b.jpg', 'https://farm5.staticflickr.com/4147/5202169929_8ae5e11278_b.jpg', 'https://farm9.staticflickr.com/8213/8308705647_0f32ff2129_o.jpg', 'https://farm6.staticflickr.com/5575/14817130336_f9bcc19451_o.jpg', 'https://farm5.staticflickr.com/4054/4477834904_d3e4f2565b_b.jpg', 'https://farm6.staticflickr.com/5567/14653458429_c0a6d0fc2d_b.jpg');
 var n = Math.floor(Math.random() * images.length);
 document.querySelector(".rand").setAttribute('src', images[n]);
-var bgimg = new Array('http://distilleryimage5.ak.instagram.com/46cd61d6a94011e1989612313815112c_7.jpg', 'https://farm3.staticflickr.com/2868/13681077483_30da59941b_o.jpg', 'https://farm4.staticflickr.com/3784/9726283581_8ec20ff00c_b.jpg', 'https://farm3.staticflickr.com/2832/9723175626_e1817b613e_b.jpg', 'https://farm8.staticflickr.com/7416/9719947181_854931f0f7_b.jpg', 'https://farm6.staticflickr.com/5567/14653458429_c0a6d0fc2d_b.jpg');
+var bgimg = new Array('https://c2.staticflickr.com/8/7227/7292284120_b6a42f965c_o.jpg', 'https://farm3.staticflickr.com/2868/13681077483_30da59941b_o.jpg', 'https://farm6.staticflickr.com/5567/14653458429_c0a6d0fc2d_b.jpg');
 var b = Math.floor(Math.random() * bgimg.length);
 document.querySelector(".bgimg").style.backgroundImage = 'url(' + bgimg[b] + ')';
 function secretSanta() {
