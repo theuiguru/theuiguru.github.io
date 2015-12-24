@@ -11,11 +11,3 @@ theuiguru.github.io
 7. ASAP! Always Say A Prayer: "God, our Father, If it is your will, walk through my house and take 
 away all my worries and illnesses and please watch over and heal my 
 family in Jesus name, Amen."
-
-#### fiddles:
-1. Name Tag - http://jsfiddle.net/mMHh9/
-2. Previous/Next Buttons - http://jsfiddle.net/wMJSn/
-3. News slider - http://jsfiddle.net/mTwqv/
-4. MGOCSMBQLI - http://jsfiddle.net/uev8K/
-5. CSS Slideshow - http://jsfiddle.net/haMs7/2/
-6. Sprited image - http://jsfiddle.net/6XeGG/
