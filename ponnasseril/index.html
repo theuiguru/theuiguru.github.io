@@ -53,6 +53,10 @@ function secretSanta() {
   		warn.innerHTML = "Invalid cuz.";
 		warn.style.color = "#cc3333";
 		return false;
+	} else if(fname !== name[i]) {
+		warn.innerHTML = "Invalid cuz.";
+		warn.style.color = "#cc3333";
+		return false;
 	} else { return msg; }
   }
 }</script></body></html>
