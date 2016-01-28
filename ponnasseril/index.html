@@ -46,7 +46,7 @@ function secretSanta() {
   santa=document.santa.name.value,
   msg = document.querySelector(".msg").innerHTML = "Hey " + santa + ", you've picked <b><u>" + name[r] + "</u></b> for secret santa 2014!",
   warn = document.querySelector(".msg"),
-  fname = document.querySelector(".fname").value;
+  fname = document.santa.name.value;
   for(var i=0; i<name.length; i++) {
   	if(fname !== name[i]) {
 		j++;
