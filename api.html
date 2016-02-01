@@ -3,7 +3,7 @@
 html, body {font-family:Arial, Helvetica, sans-serif; font-size:14px;}
 span {color:#66CC00; font-size:16px; font-weight:bold;}
 .flickr {display:inline-block; vertical-align:top; list-style:none;}
-</style></head><body><h1></h1><img src="">
+</style></head><body><h1></h1><img src="" class="profile">
 <h3>Where I live</h3><p><img src="http://maps.googleapis.com/maps/api/staticmap?center=7%20Albatross%20Road,%20Levittown,%20NY%2011756&zoom=18&size=380x200&maptype=satellite&sensor=false" title="map"></p>
 <h3>My Flickr Pics</h3><p class="flickr"></p>
 <h3>CT checkins at...</h3><p class="places"></p><p><img src="https://playfoursquare.s3.amazonaws.com/press/logo/poweredByFoursquare_gray.png"></p>
@@ -63,7 +63,7 @@ $.getJSON('https://api.github.com/users/theuiguru', function(data){
 	// selects the empty h1 tag in the body and puts the value of 'name' key from the returned data into it
 	$('h1').append(data.name);
 	// selects the img tag in the body and puts the link value of 'avatar_url' from the returned data into its 'src' field 
-	$('img').attr('src', data.avatar_url);
+	$('.profile').attr('src', data.avatar_url);
 });
 places.fetch("cthomas1211");
 Info.fetch("christhomas101");
