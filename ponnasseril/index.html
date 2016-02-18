@@ -35,31 +35,28 @@ var b = Math.floor(Math.random() * bgimg.length);
 document.querySelector(".bgimg").style.backgroundImage = 'url(' + bgimg[b] + ')';
 function secretSanta() {
   event.preventDefault();
-/* CUZINZ Secret Santa Checklist:
-	1. No cousin outside the array should be permitted to enter their name.
-	2. No redundancy (aka you can't pick yourself).
-	3. Spouse != Spouse.
-	4. Sibling != Sibling.
-*/
+  /* CUZINZ Secret Santa Checklist:
+  1. No cousin outside the array should be permitted to enter their name.
+  2. No redundancy (aka you can't pick yourself).
+  3. Spouse != Spouse.
+  4. Sibling != Sibling.
+  */
   var name = ['Sanu', 'Jwala', 'Ranjan', 'Roshan', 'Swithin', 'Rena', 'Shanu', 'Justin', 'Alex', 'Chris', 'Dinah', 'Priya', 'Christian', 'Manna', 'Sarah'],
   r = Math.floor(Math.random() * name.length),
   santa=document.santa.name.value,
   msg = document.querySelector(".msg").innerHTML = "Hey " + santa + ", you've picked <b><u>" + name[r] + "</u></b> for secret santa 2014!",
-  warn = document.querySelector(".msg"),
-  fname = document.santa.name.value;
+  warn = document.querySelector(".msg");
   for(var i=0; i<name.length; i++) {
-  	if(fname !== name[i]) {
-		j++;
-	} else if(j===0) {
+  	if(santa==="") {
   		//alert("You need to enter a 'valid' cuz.");
   		warn.innerHTML = "No cousin here!";
 		warn.style.color = "#cc3333";
 		return false;
-	} else if(fname === "") {
-  		//alert("You need to enter a 'valid' cuz.");
-  		warn.innerHTML = "No cousin here!";
-		warn.style.color = "#cc3333";
-		return false;
-	} else { return msg; }
+	} else if(santa!==name[i]) {
+      warn.innerHTML = "No cousin here!";
+      warn.style.color = "#cc3333";
+      return false;
+    }
+    else { return msg; }
   }
 }</script></body></html>
