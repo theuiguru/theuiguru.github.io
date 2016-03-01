@@ -1,4 +1,4 @@
-var quote = new Array("Every protagonist of every story, show, or movie is the story of my life.", 
+var quote = ["Every protagonist of every story, show, or movie is the story of my life.", 
 	"Intelligence is not a privilege, it's a gift, and you use it for the good of mankind.", 
 	"If you wanna win, you gotta fuel like a winner!", 
 	"Just Do It!", 
@@ -58,5 +58,5 @@ var quote = new Array("Every protagonist of every story, show, or movie is the s
 	"On this Feast of Dormition, I ask myself: Would a Marthoma quarterback throw a 'Hail Mary?' - Steve Kurian",
 	"Making her smile is the way to her heart...or be lazy and just get her food.",
 	"May the fourth be with you."
-);
+];
 var q=quote.length, rand=Math.floor(Math.random()*q);
