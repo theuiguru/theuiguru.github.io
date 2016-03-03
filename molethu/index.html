@@ -30,11 +30,10 @@ function countdown() {
         ss + ' seconds' + ' \'til our family reunion!';
 } setInterval(countdown, 1000 );
 
-var images = new Array('http://farm6.staticflickr.com/5146/5551452451_14e545d804_o.png', 'https://lh3.googleusercontent.com/-qaKJ-kebyJA/UgBtt_TXnWI/AAAAAAAACW0/-ZfQaWNhaLk/w1333-h889-no/IMG_3156.JPG', 'https://lh4.googleusercontent.com/-8D229IiJSdA/SxxjQYR-gCI/AAAAAAAAAaQ/zllLUrRTsz0/w771-h578-no/DSC00524.JPG', 'https://lh3.googleusercontent.com/-w4UeyG9N97E/SxxjdH1iu0I/AAAAAAAAAak/o2zhbHnCoR8/w771-h578-no/DSC00533.JPG', 'https://lh3.googleusercontent.com/-LYpV_4SlfTw/SxxjpHAC8JI/AAAAAAAAAa0/dqqBHl7ULPU/w771-h578-no/DSC00540.JPG');
-
 function changeBg (images) {
-    var n = Math.floor(Math.random() * images.length); //generates a random integer between 0 and the length of the supplied array.
-    document.body.style.backgroundImage = 'url(' + images[n] + ')'; //sets the background-image of the 'body'.
+  var images = ['http://farm6.staticflickr.com/5146/5551452451_14e545d804_o.png', 'https://lh3.googleusercontent.com/-qaKJ-kebyJA/UgBtt_TXnWI/AAAAAAAACW0/-ZfQaWNhaLk/w1333-h889-no/IMG_3156.JPG', 'https://lh4.googleusercontent.com/-8D229IiJSdA/SxxjQYR-gCI/AAAAAAAAAaQ/zllLUrRTsz0/w771-h578-no/DSC00524.JPG', 'https://lh3.googleusercontent.com/-w4UeyG9N97E/SxxjdH1iu0I/AAAAAAAAAak/o2zhbHnCoR8/w771-h578-no/DSC00533.JPG', 'https://lh3.googleusercontent.com/-LYpV_4SlfTw/SxxjpHAC8JI/AAAAAAAAAa0/dqqBHl7ULPU/w771-h578-no/DSC00540.JPG'];
+  var n = Math.floor(Math.random() * images.length); //generates a random integer between 0 and the length of the supplied array.
+  document.body.style.backgroundImage = 'url(' + images[n] + ')'; //sets the background-image of the 'body'.
 } changeBg(images);</script></body></html>
 <!--Here is a special message delivered by the patriarch of the Molethu Family, Mr. John Varghese Molethu,
 to the family members at the American Molethu 1st Annual Reunion, of 2009, entitled "Molethu Meet in Virginia, U.S.A. - November 2009":
