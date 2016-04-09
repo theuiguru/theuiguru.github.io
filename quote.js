@@ -56,4 +56,5 @@ var quote = ["Every protagonist of every story, show, or movie is the story of m
 	"Making her smile is the way to her heart...or be lazy and just get her food.",
 	"May the fourth be with you."
 ];
-var q=quote.length, rand=Math.floor(Math.random()*q);
+var rand=Math.floor(Math.random()*quote.length);
+document.querySelector(".quote").innerHTML = quote[rand];
