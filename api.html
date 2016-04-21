@@ -1,15 +1,23 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title>API</title>
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Web Cards</title>
 <style type="text/css">
-html, body {font-family:Arial, Helvetica, sans-serif; font-size:14px;}
+html, body {margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:14px;}
 span {color:#66CC00; font-size:16px; font-weight:bold;}
 .flickr {display:inline-block; vertical-align:top; list-style:none;}
 img.profile {border-radius:100%; max-width:100px; width:100%;}
-</style></head><body><h1></h1><p><img src="" class="profile"></p>
-<a class="twitter-timeline" href="https://twitter.com/cthomas1211" data-widget-id="707426623218388992">Tweets by @cthomas1211</a>
+.card {max-width:700px; border:1px solid #9E9D24; border-radius:4px; margin:0 auto; margin-bottom:1em;}
+.card-head {border:1px solid #C6FF00; background:#F4FF81; padding:0 20px; line-height:5px;}
+.card-body {padding:10px 20px;}
+</style></head><body>
+<div class="card">
+  <div class="card-head"><h2>ct's social feed</h2></div>
+  <div class="card-body">
+    <h3>CT checkins at...</h3><p class="places"></p><p><img src="https://playfoursquare.s3.amazonaws.com/press/logo/poweredByFoursquare_gray.png"></p>
+    <a class="twitter-timeline" href="https://twitter.com/cthomas1211" data-widget-id="707426623218388992">Tweets by @cthomas1211</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <h3>Where I live</h3><p><img src="http://maps.googleapis.com/maps/api/staticmap?center=7%20Albatross%20Road,%20Levittown,%20NY%2011756&zoom=18&size=380x200&maptype=satellite&sensor=false" title="map"></p>
 <h3>My Flickr Pics</h3><p class="flickr"></p>
-<h3>CT checkins at...</h3><p class="places"></p><p><img src="https://playfoursquare.s3.amazonaws.com/press/logo/poweredByFoursquare_gray.png"></p>
+  </div>
+</div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script><script>
 var Info = {
 	fetch: function(username) {
