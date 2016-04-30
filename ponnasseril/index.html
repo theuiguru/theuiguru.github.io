@@ -57,4 +57,9 @@ function secretSanta() {
     }*/
     else { return msg; }
   }
-}</script></body></html>
+}
+var cuzinz = "https://gist.githubusercontent.com/theuiguru/726f393983a073ad7cab/raw/91f0aca9f008782050067fcc20cfaf829ec2ff0b/cuzinz.json";
+$.get(cuzinz, function(data) {
+  $('.cuzinz').html(data);
+});
+</script></body></html>
