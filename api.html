@@ -78,6 +78,17 @@ $.getJSON('https://api.github.com/users/theuiguru', function(data){
 	// selects the img tag in the body and puts the link value of 'avatar_url' from the returned data into its 'src' field 
 	$('.profile').attr('src', data.avatar_url);
 });
+$.ajax({
+  type: "GET",
+  dataType: "jsonp",
+  cache: false,
+  url: "https://api.instagram.com/v1/users/self/media/recent?access_token=7744071.1677ed0.474ca84a8db04d4c895ec122967e5667&client_id=a10368fdc8654ab88f53def5c21b2aa2&count=20",
+  success: function(data)  {
+    for(var i=0; i<200; i++) {
+      $(".instagram").append("<a target='_blank' href='" + data.data[i].link +"'><img src='" + data.data[i].images.thumbnail.url +"'/></a>");
+    }
+  }
+});
 places.fetch("cthomas1211");
 Info.fetch("christhomas101");
 </script></body></html>
