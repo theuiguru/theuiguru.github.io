@@ -61,10 +61,8 @@ var places = {
 	fetch: function() {
 		var url = "https://api.foursquare.com/v2/users/self/checkins?limit=10&oauth_token=3FLJTHPL4OHWMZO2G2DGJ2HPAJJPTPVCW0EEZX12PKV32GBS&v=20130312";
 		$.getJSON(url, function(json) {
-			//console.log(json.response.checkins.items);
-			var places = json.response.checkins.items,
-				limit = 10;
-			for(var i=0; i<limit; i++) {
+			var places = json.response.checkins.items;
+			for(var i=0; i<10; i++) {
 				$('.places').append('<p><span>' + places[i].venue.name + '</span>; ' + places[i].venue.location.city + ', ' + places[i].venue.location.state + '</p>');
 			}
 		});
