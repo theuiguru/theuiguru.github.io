@@ -59,7 +59,8 @@ $(function(){
 });
 var places = {
 	fetch: function() {
-		var url = "https://api.foursquare.com/v2/users/self/checkins?limit=10&oauth_token=3FLJTHPL4OHWMZO2G2DGJ2HPAJJPTPVCW0EEZX12PKV32GBS&v=20130312";
+		var url = "https://api.foursquare.com/v2/users/self/checkins?limit=10&oauth_token=3FLJTHPL4OHWMZO2G2DGJ2HPAJJPTPVCW0EEZX12PKV32GBS&v=20130312",
+		icons = "https://api.foursquare.com/v2/venues/categories?oauth_token=3FLJTHPL4OHWMZO2G2DGJ2HPAJJPTPVCW0EEZX12PKV32GBS&v=20160526";
 		$.getJSON(url, function(json) {
 			var places = json.response.checkins.items;
 			for(var i=0; i<10; i++) {
