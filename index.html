@@ -53,16 +53,15 @@ $(function() {
   	}
   };
   places.fetch('cthomas1211');
-$(function(){
   var id='29049438@N07';
   var limit ='3';
   // Flickr Photostream feed link.
-  $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=" + id + "&lang=en-us&format=json&jsoncallback=?", function(data){$.each(data.items, function(i,item){
-    // Number of thumbnails to show.
-    if(i < limit){
-      // Create images and append to div id flickr and wrap link around the image.
-      $("<img/>").attr("src", item.media.m.replace('_m', '_s')).appendTo(".flickr").wrap("<a href='" + item.media.m.replace('_m', '_z) + "' name='"+ item.link + "' title='" +  item.title +"' target='_blank'></a>"); }
-      });
-  });
+  $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=" + id + "&lang=en-us&format=json&jsoncallback=?", function(data){ $.each(data.items, function(i,item) {
+      // Number of thumbnails to show.
+      if(i < limit) {
+        // Create images and append to div id flickr and wrap link around the image.
+        $("<img/>").attr("src", item.media.m.replace('_m', '_s')).appendTo(".flickr").wrap("<a href='" + item.media.m.replace('_m', '_z) + "' name='"+ item.link + "' title='" +  item.title +"' target='_blank'></a>"); 
+      }
+    });
   });
 });</script></body></html>
