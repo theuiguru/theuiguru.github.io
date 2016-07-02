@@ -12,6 +12,7 @@ img.profile {border-radius:100%; max-width:100px; width:100%;}
   <div class="card-head"><h2>ct's social feed</h2></div>
   <div class="card-body">
     <h3>CT checkins at...</h3><p class="places"></p><p><img src="https://playfoursquare.s3.amazonaws.com/press/logo/poweredByFoursquare_gray.png"></p>
+    <h3>delicious bookmarks</h3><ul class="bookmarks"></ul>
     <a class="twitter-timeline" href="https://twitter.com/cthomas1211" data-widget-id="707426623218388992">Tweets by @cthomas1211</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <h3>Where I live</h3><p><img src="http://maps.googleapis.com/maps/api/staticmap?center=7%20Albatross%20Road,%20Levittown,%20NY%2011756&zoom=18&size=380x200&maptype=satellite&sensor=false" title="map"></p>
@@ -68,6 +69,11 @@ var places = {
 		});
 	}
 };
+$.getJSON('http://feeds.del.icio.us/v2/json/cthomas1211?count=100', function(json) {
+  for(var i=0; i<5; i++) {
+    $('.bookmarks').append('<li><a href="' + json[i].u + '" target="_blank">' + json[i].d + '</a></li>');
+  }
+});
 $.getJSON('https://api.github.com/users/theuiguru', function(data){
 	//prints the returned data in the console
 	console.log(data);
