@@ -18,6 +18,7 @@ img.profile {border-radius:100%; max-width:100px; width:100%;}
 <h3>Where I live</h3><p><img src="http://maps.googleapis.com/maps/api/staticmap?center=7%20Albatross%20Road,%20Levittown,%20NY%2011756&zoom=18&size=380x200&maptype=satellite&sensor=false" title="map"></p>
 <h3>My Flickr Pics</h3><p class="flickr"></p>
 <h3>My InstaFeed</h3><p class="instagram"></p>
+<h3>My Blog</h3><div class="blog"></div>
   </div>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
@@ -95,4 +96,8 @@ $.ajax({
 });
 places.fetch("cthomas1211");
 Info.fetch("christhomas101");
+
+$.get('https://gist.githubusercontent.com/theuiguru/96f1fefeb24b49bb339d/raw/30743e6d9241f2782ee5d1a4a654e36738b29a8e/feed.txt', function(data) {
+  $('.blog').html(data);
+});
 </script></body></html>
