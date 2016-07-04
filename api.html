@@ -75,6 +75,9 @@ $.getJSON('http://feeds.del.icio.us/v2/json/cthomas1211?count=100', function(jso
     $('.bookmarks').append('<li><a href="' + json[i].u + '" target="_blank">' + json[i].d + '</a></li>');
   }
 });
+$.getJSON('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json', function(json) {
+	$('').append('');
+});
 $.getJSON('https://api.github.com/users/theuiguru', function(data){
 	//prints the returned data in the console
 	console.log(data);
