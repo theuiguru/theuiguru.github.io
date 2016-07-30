@@ -45,16 +45,12 @@ function secretSanta() {
   msg = document.querySelector(".msg").innerHTML = "Hey " + santa + ", you've picked <b><u>" + name[r] + "</u></b> for secret santa 2014!",
   warn = document.querySelector(".msg");
   for(var i=0; i<name.length; i++) {
-  	if(santa==="") {
+  	if(santa == "") {
   		//alert("You need to enter a 'valid' cuz.");
-  		warn.innerHTML = "No cousin here!";
+		warn.innerHTML = "No cousin here!";
 		warn.style.color = "#cc3333";
 		return false;
-	} /*else if(santa!==name[i]) {
-	warn.innerHTML = "No cousin here!";
-      	warn.style.color = "#cc3333";
-      	return false;
-    	}*/
+	}
     	else { return msg; }
   }
 }
