@@ -13,7 +13,7 @@ h1, h2 {font-weight:500; text-shadow:1px 1px 1px #263238; font-size:4em;}
 $(function() {
   $.getJSON('https://gist.githubusercontent.com/theuiguru/96f1fefeb24b49bb339d/raw/8d91d9a2475c4a9d7a562a49d12e3c058df54cc8/blog.json', function(d) {
     for(var i=0; i<200; i++)
-      $('.blog').append(d.data.posts[i].title + d.data.posts[i].html);
+      $('.blog').append('<h2>' + d.data.posts[i].title + '</h2><div class="post">' + d.data.posts[i].html + '</div>');
   });
 });
 </script></body></html>
