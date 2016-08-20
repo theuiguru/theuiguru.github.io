@@ -17,6 +17,10 @@ footer {text-align:center; padding:20px; background:#00E676; color:#fff;}
 <script type="text/javascript">
 $(function() {
   $.getJSON('blog.json', function(d) {
+    $('.post).hide();
+    $('h2').click(function() {
+      $('.post').slideToggle();
+    });
     for(var i=0; i<200; i++)
       $('.blog').append('<h2>' + d.data.posts[i].title + '</h2><div class="post">' + d.data.posts[i].html + '</div>');
   });
