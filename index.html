@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head><title>hello, world!</title><meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width; content='width = 320; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes; target-densitydpi=160dpi'>
+<meta name='viewport' content='width=device-width;' content='width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes; target-densitydpi=160dpi'>
 <meta name='keywords' content='ct, chris thomas, christhomas, yellow, theuiguru'>
 <meta name='description' content='Think Bright, Think CT!'><style type="text/css">
 html, body {margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#263238; line-height:1.5; background:#292B37;}
@@ -16,7 +16,6 @@ footer {text-align:center; padding:20px; background:#00E676; color:#fff;}
 </style></head><body>
   <header>
     <h1>&lt; സിടി / &gt;</h1><p>checkout my <a href="https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json">personal api</a></p>
-    <p class="job"></p>
   </header>
   <section class="twitter">
     <a class="twitter-timeline" href="https://twitter.com/cthomas1211" data-widget-id="707426623218388992" data-chrome="noheader nofooter noscrollbar noborders transparent" data-tweet-limit="1" data-aria-polite="assertive" width="100%" height="400">Tweets by @cthomas1211</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -45,9 +44,5 @@ $(function() {
     }
   };
   places.fetch("cthomas1211");
-  
-  $.getJSON('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json', function(data){
-    $('.job').append('<p>Currently working as a <a href="http://linkedin.com/in/christhomas101">' + data.employment[0].title + '</a> at ' + data.employment[0].organization + '<br/>while also studying to be a ' + data.education[4].degree + ' in ' + data.education[4].major + ' at ' + data.education[4].school + '</p>');
-  });
 });
 </script></body></html>
