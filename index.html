@@ -10,7 +10,7 @@ h1, h2 {font-weight:500; text-shadow:1px 1px 1px #263238;}
 h1 {font-size:7em;} h2 {font-size:34px; color:#FFFF8D;}
 section {padding:30px; background:#292B37; color:#fff;}
 .twitter {background:#2196F3;}
-.places {background:#F94877; text-align:center;}
+.places {background:#F94877; text-align:center;} .places a {color:#FCE4EC;}
 span {color:#C51162;}
 footer {text-align:center; padding:20px; background:#00E676; color:#fff;}
 </style></head><body>
@@ -38,7 +38,7 @@ $(function() {
       $.getJSON(url, function(json) {
         var places = json.response.checkins.items;
         for(var i=0; i<1; i++) {
-          $('.places').append('<span>Last place seen at</span> ' + places[i].venue.name + ', ' + places[i].venue.location.city + ', ' + places[i].venue.location.state);
+          $('.places').append('<span>Last seen at</span> <a href="http://foursquare.com/v/' + places[i].venue.id + '" target="_blank">' + places[i].venue.name + ', ' + places[i].venue.location.city + ', ' + places[i].venue.location.state + '</a>');
         }
       });
     }
