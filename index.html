@@ -1,26 +1,53 @@
-<!DOCTYPE html><html><head><title>hello, world!</title>
-<style type="text/css">
+<!DOCTYPE html><html><head><title>hello, world!</title><meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width; content='width = 320; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes; target-densitydpi=160dpi'>
+<meta name='keywords' content='ct, chris thomas, christhomas, yellow, theuiguru'>
+<meta name='description' content='Think Bright, Think CT!'><style type="text/css">
 html, body {margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:20px; color:#263238; line-height:1.5; background:#292B37;}
 a {color:#2196F3; text-decoration:none;} a:hover {opacity:0.5;}
 header {background:#FFEB3B; text-align:center; padding:40px; height:600px;}
+header span {color:#673AB7;}
 h1, h2 {font-weight:500; text-shadow:1px 1px 1px #263238;}
 h1 {font-size:7em;} h2 {font-size:34px; color:#FFFF8D;}
 section {padding:30px; background:#292B37; color:#fff;}
+.twitter {background:#2196F3;}
+.places {background:#F94877; text-align:center;}
+span {color:#C51162;}
 footer {text-align:center; padding:20px; background:#00E676; color:#fff;}
 </style></head><body>
   <header>
-    <h1>&lt; സിടി / &gt;</h1><p>checkout my <a href="https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json">personal api</a>, <a href="http://linkedin.com/in/christhomas101">linkedin</a>, <a href="http://twitter.com/cthomas1211">tweets</a>, <a href="http://github.com/theuiguru">commits</a></p>
+    <h1>&lt; സിടി / &gt;</h1><p>checkout my <a href="https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json">personal api</a></p>
+    <p class="job"></p>
   </header>
-  <section class="twitter"><a class="twitter-timeline" href="https://twitter.com/cthomas1211" data-widget-id="707426623218388992" data-chrome="noheader nofooter noscrollbar noborders transparent" data-tweet-limit="1" data-aria-polite="assertive" width="100%" height="400">Tweets by @cthomas1211</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <section class="twitter">
+    <a class="twitter-timeline" href="https://twitter.com/cthomas1211" data-widget-id="707426623218388992" data-chrome="noheader nofooter noscrollbar noborders transparent" data-tweet-limit="1" data-aria-polite="assertive" width="100%" height="400">Tweets by @cthomas1211</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </section>
+  <section class="places"></section>
+  <section class="commit"></section>
   <section class="blog"></section>
   <footer>often written with a simple mind, or no mind at all</footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function() {
-  $.getJSON('blog.json', function(d) {
-    for(var i=0; i<200; i++)
+  $.getJSON('http://theuiguru.github.io/blog.json', function(d) {
+    for(var i=0; i<5; i++)
       $('.blog').append('<h2>' + d.data.posts[i].title + '</h2><div class="post">' + d.data.posts[i].html + '</div>');
+  });
+  
+  var places = {
+    fetch: function() {
+      var url = "https://api.foursquare.com/v2/users/self/checkins?limit=10&oauth_token=3FLJTHPL4OHWMZO2G2DGJ2HPAJJPTPVCW0EEZX12PKV32GBS&v=20130312";
+      $.getJSON(url, function(json) {
+        var places = json.response.checkins.items;
+        for(var i=0; i<1; i++) {
+          $('.places').append('<span>Last place seen at</span> ' + places[i].venue.name + ', ' + places[i].venue.location.city + ', ' + places[i].venue.location.state);
+        }
+      });
+    }
+  };
+  places.fetch("cthomas1211");
+  
+  $.getJSON('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json', function(data){
+    $('.job').append('<p>Currently working as a <a href="http://linkedin.com/in/christhomas101">' + data.employment[0].title + '</a> at ' + data.employment[0].organization + '<br/>while also studying to be a ' + data.education[4].degree + ' in ' + data.education[4].major + ' at ' + data.education[4].school + '</p>');
   });
 });
 </script></body></html>
