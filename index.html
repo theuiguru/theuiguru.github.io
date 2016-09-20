@@ -28,7 +28,7 @@ footer {text-align:center; padding:20px; background:#00E676; color:#fff;}
 <script type="text/javascript">
 $(function() {
   $.getJSON('http://theuiguru.github.io/blog.json', function(d) {
-    for(var i=0; i<5; i++)
+    for(var i=0; i<1; i++)
       $('.blog').append('<h2>' + d.data.posts[i].title + '</h2><div class="post">' + d.data.posts[i].html + '</div>');
   });
   
