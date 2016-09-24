@@ -29,4 +29,25 @@ footer {background:#00E676; text-align:center; color:#fff; padding:20px;}
     <div class="col-lg-4 quote">fav quote data</div>
   </div>
 </section>
-<footer>Lovingly made on LI with &lt;/&gt;.</footer><script src="https://code.jquery.com/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script></body></html>
+<footer>Lovingly made on LI with &lt;/&gt;.</footer><script src="https://code.jquery.com/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(function() {
+  $.getJSON('http://theuiguru.github.io/blog.json', function(d) {
+    for(var i=0; i<1; i++)
+      $('.blog').append('<h2>' + d.data.posts[i].title + '</h2><div class="post">' + d.data.posts[i].html + '</div>');
+  });
+  
+  var url = "https://api.foursquare.com/v2/users/self/checkins?limit=10&oauth_token=3FLJTHPL4OHWMZO2G2DGJ2HPAJJPTPVCW0EEZX12PKV32GBS&v=20130312";
+  $.getJSON(url, function(json) {
+    var places = json.response.checkins.items;
+    for(var i=0; i<1; i++) {
+      $('.places').append('<span>Last seen at</span> <a href="http://foursquare.com/v/' + places[i].venue.id + '" target="_blank">' + places[i].venue.name + ', ' + places[i].venue.location.city + ', ' + places[i].venue.location.state + '</a>');
+    }
+  });
+  
+  $.getJSON('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json', function(data) {
+    for(var i=0; i<21; i++)
+      $('.projects').append('<li><a href="' + data.projects[i].url + '" target="_blank">' + data.projects[i].title + '</a></li>');
+  });
+});
+</script></body></html>
