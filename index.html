@@ -12,7 +12,7 @@ section {padding:30px; background:#292B37; color:#fff;}
 .twitter {background:#2196F3; text-align:center;}
 .places {background:#F94877; text-align:center;} .places a {color:#FCE4EC;}
 .projects {background:#311B92;}
-.projects > li {display:inline-block; margin:0 10px;}
+.projects>li, .social>li {display:inline-block; margin:0 10px;}
 span {color:#C51162;}
 footer {text-align:center; padding:20px; background:#00E676; color:#fff;}
 </style></head><body>
@@ -46,7 +46,7 @@ $(function() {
     for(var i=0; i<21; i++)
       $('.projects').append('<li><a href="' + data.projects[i].url + '" target="_blank">' + data.projects[i].title + '</a></li>');
     for(var i=0; i<20; i++)
-      $('.social').append('<a href="' + data.social[i].url + '" target="_blank">' + data.social[i].title + '</a>');
+      $('.social').append('<li><a href="' + data.social[i].url + '" target="_blank">' + data.social[i].title + '</a></li>');
   });
 });
 </script></body></html>
