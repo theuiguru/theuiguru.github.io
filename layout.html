@@ -1,34 +1,28 @@
-<!DOCTYPE html><html><head><title>Think Bright, Think CT!</title>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><style type="text/css">
-header {background:#FFEB3B; text-align:center;}
-.col-lg-4 {text-align:center; padding:3em; line-height:10em; color:#fff;}
-.foursquare {background:#F94877;}
-.twitter {background:#2196F3;}
-.github {background:#6cc644;}
-.flickr {background:#0063dc;}
-.instagram {background:#c13584;}
-.delicious {background:#3399ff;}
-.youtube {background:#cd201f;}
-.projects {background:#ff9933;}
-.quote {background:#4A148C;}
-footer {background:#00E676; text-align:center; color:#fff; padding:20px;}
-</style></head><body>
-<header><div class="row"><div class="col-lg-6"><h1>hi, i'm ct.</h1></div><div class="col-lg-6"><h2>obey - work hard - pray</h2></div></div></header>
-<section class="main">
-  <div class="row">
-    <div class="col-lg-4 foursquare">foursquare checkin data</div>
-    <div class="col-lg-4 twitter">twitter tweets data</div>
-    <div class="col-lg-4 github">github repo data</div>
-  </div><div class="row">
-    <div class="col-lg-4 flickr">flickr photo data</div>
-    <div class="col-lg-4 instagram">instagram photo (possibly "likes") data</div>
-    <div class="col-lg-4 delicious">delicious bookmark data</div>
-  </div><div class="row">
-    <div class="col-lg-4 youtube">youtube playlist data</div>
-    <div class="col-lg-4 projects">projects data</div>
-    <div class="col-lg-4 quote">fav quote data</div>
-  </div>
-</section>
+<!DOCTYPE html><html><head><title>Think Bright, Think CT!</title><style type="text/css">
+*, :before, :after {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+html, body {margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; color:#444; text-align:center;}
+a {color:#DC143C; text-decoration:none;} a:hover {text-decoration:underline;}
+.emotion {font-size:6em; line-height:250px; color:#fff;}
+.emotion > div {-webkit-transition:color 0.2s ease-in-out, border-color 0.2s ease-in-out, background 0.2s ease-in-out, opacity 0.2s ease-in-out; transition:color 0.2s ease-in-out, border-color 0.2s ease-in-out, background 0.2s ease-in-out, opacity 0.2s ease-in-out;}
+.btn {width:50%; float:left; text-shadow:1px 1px 0 #ccc; cursor:pointer;}
+.happy {background:#AB47BC;} .happy:hover {background:#f6f;}
+.sad {background:#2196f3;} .sad:hover {background:#47cfeb;}
+.mad {background:#41ce4d;} .mad:hover {background:#3f6;}
+.tired {background:#26A69A;} .tired:hover {background:#3ff;}
+.hungry {background:#fdd835;} .hungry:hover {background:#ff3;}
+.sick {background:#FF1744;} .sick:hover {background:#f69;}
+footer {font-size:11px; color:#fff; line-height:40px; background:#5843c7;}
+@media only screen and (max-width:1000px) {
+  .btn {width:100%;}
+}
+</style></head><body><div class="emotion">
+  <div class="btn happy" onclick="emo1();">Happy</div>
+  <div class="btn sad" onclick="emo2();">Sad</div>
+  <div class="btn mad" onclick="emo3();">Mad</div>
+  <div class="btn tired" onclick="emo4();">Tired</div>
+  <div class="btn hungry" onclick="emo5();">Hungry</div>
+  <div class="btn sick" onclick="emo6();">Sick</div>
+</div>
 <footer>Lovingly made on LI with &lt;/&gt;.</footer><script src="https://code.jquery.com/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 $(function() {
