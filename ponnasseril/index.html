@@ -31,27 +31,4 @@ document.querySelector(".rand").setAttribute('src', images[n]);
 var bgimg = ['https://c2.staticflickr.com/8/7227/7292284120_b6a42f965c_o.jpg', 'https://farm3.staticflickr.com/2868/13681077483_30da59941b_o.jpg', 'https://farm6.staticflickr.com/5567/14653458429_c0a6d0fc2d_b.jpg'];
 var b = Math.floor(Math.random() * bgimg.length);
 document.querySelector(".bgimg").style.backgroundImage = 'url(' + bgimg[b] + ')';
-function secretSanta() {
-  event.preventDefault();
-  /* CUZINZ Secret Santa Checklist:
-  1. No cousin outside the array should be permitted to enter their name.
-  2. No redundancy (aka you can't pick yourself).
-  3. Spouse != Spouse.
-  4. Sibling != Sibling.
-  */
-  var name = 'https://gist.githubusercontent.com/theuiguru/726f393983a073ad7cab/raw/414783bb5716784c3028015afdb06ab039a14128/cuzinz.json',
-  r = Math.floor(Math.random() * name.length),
-  santa=document.santa.name.value,
-  msg = document.querySelector(".msg").innerHTML = "Hey " + santa + ", you've picked <b><u>" + name[r] + "</u></b> for secret santa 2014!",
-  warn = document.querySelector(".msg");
-  for(var i=0; i<name.length; i++) {
-  	if(santa == "") {
-  		//alert("You need to enter a 'valid' cuz.");
-		warn.innerHTML = "No cousin here!";
-		warn.style.color = "#cc3333";
-		return false;
-	}
-    	else { return msg; }
-  }
-}
 </script></body></html>
