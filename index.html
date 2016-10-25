@@ -50,7 +50,7 @@ $(function() {
       $('.social').append('<li><a href="' + data.social[i].profile_url + '" target="_blank">' + data.social[i].title + '</a></li>');
     var q=quote.length, 
     randomQuote=Math.round(Math.random()*(q-1));
-    document.querySelector(".quote").innerHTML = quote[randomQuote];
+    $(".quote").append("<i>" + quote[randomQuote] + "</i>");
   });
   
   $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=29049438@N07&lang=en-us&format=json&jsoncallback=?", function(data) {
