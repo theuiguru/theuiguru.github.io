@@ -46,9 +46,10 @@ $(function() {
       $('.projects').append('<li><a href="' + data.projects[i].url + '" target="_blank">' + data.projects[i].title + '</a></li> / ');
     for(var i=0; i<20; i++)
       $('.social').append('<li><a href="' + data.social[i].profile_url + '" target="_blank">' + data.social[i].title + '</a></li>');
-    var q=quote.length, 
+    
+    var q=data.quotes[].length, 
     randomQuote=Math.round(Math.random()*(q-1));
-    $(".quote").append("<i>" + quote[randomQuote] + "</i>");
+    $("footer").append("<i>" + data[randomQuote] + "</i>");
   });
   
   $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=29049438@N07&lang=en-us&format=json&jsoncallback=?", function(data) {
