@@ -42,8 +42,6 @@ $(function() {
   $.getJSON('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json', function(data) {
     for(var i=0; i<21; i++)
       $('.projects').append('<li><a href="' + data.projects[i].url + '" target="_blank">' + data.projects[i].title + '</a></li> / ');
-    for(var i=0; i<21; i++)
-      $('.social').append('<li><a href="' + data.social[i].profile_url + '" target="_blank">' + data.social[i].title + '</a></li>');
   });
   
   $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=29049438@N07&lang=en-us&format=json&jsoncallback=?", function(data) {
