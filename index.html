@@ -9,12 +9,9 @@ header {background:#FFEB3B; text-align:center; padding:40px; height:700px;}
 h1, h2 {font-weight:500; text-shadow:1px 1px 1px #263238;}
 h1 {font-size:50px;} h2 {font-size:30px; color:#FFFF8D;}
 h1 p:nth-child(1) {font-size:100px;}
-.section {width:50%; float:left; font-size:24px; padding:20px; height:400px; background:#292B37; color:#fff; text-align:center;}
+.section {width:50%; float:left; font-size:30px; padding:30px; height:400px; background:#292B37; color:#fff; text-align:center;}
 .twitter {background:#2196F3;}
-.places {background:#F94877; padding-top:100px;} .places a {color:#FCE4EC;} span {color:#C51162;}
-.projects>li, .social>li {display:inline-block; margin:0 10px;}
-.social {background:#1A237E; text-align:center; line-height:80px;}
-footer {text-align:center; padding:20px; line-height:40px; background:#00E676; color:#fff;}
+.places {background:#F94877;} .places a {color:#FCE4EC;} span {color:#C51162;}
 @media only screen and (max-width:1000px) {
   header, .section {width:100%; min-height:300px; padding:40px;}
 }
@@ -34,12 +31,6 @@ $(function() {
       $('.places').append('<span>Last seen at</span><br/><a href="http://foursquare.com/v/' + places[i].venue.id + '" target="_blank">' + places[i].venue.name + ', ' + places[i].venue.location.city + ', ' + places[i].venue.location.state + '</a>');
     }
   });
-  
-  $.getJSON('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json', function(data) {
-    for(var i=0; i<21; i++)
-      $('.projects').append('<li><a href="' + data.projects[i].url + '" target="_blank">' + data.projects[i].title + '</a></li> / ');
-  });
-  
   $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=29049438@N07&lang=en-us&format=json&jsoncallback=?", function(data) {
     $.each(data.items, function(i,item) {
       // Number of thumbnails to show.
