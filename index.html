@@ -36,13 +36,13 @@ footer a {
     <li><a href="http://codepen.io/cthomas">codepen</a></li>
   </ul>
 </section>
-<section><h3>Random Quote</h3> <blockquote></blockquote></section>
+<section><h3>Random Quote</h3> <div class="well"><blockquote class="quote"></blockquote></div></section>
 <footer><a href="http://github.com/theuiguru">open source me</a></footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script><script type="text/javascript">
 $(function() {
   $.getJSON('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json', function(data) {
     var random = Math.floor(Math.random()*(data.quotes.length));
-    $('blockquote').html('<i>' + data.quotes[random].quote + '</i>');
+    $('.quote').html('<i>' + data.quotes[random].quote + '</i>');
   });
 });
 </script></body></html>
