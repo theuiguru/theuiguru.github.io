@@ -20,9 +20,8 @@ $(function() {
   $.getJSON('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json', function(data) {
     var random = Math.floor(Math.random()*(data.quotes.length));
     $('.quote').html('<i>' + data.quotes[random].quote + '</i>');
-    //$.each(data.projects, function(i) { });
     var i = Math.floor(Math.random()*(data.projects.length));
-    $('.projects').append('Something I\'ve made: <a href="' + data.projects[i].url + '" target="_blank">' + data.projects[i].title + '</a>');
+    $('.projects').append('A random app I\'ve made: <a href="' + data.projects[i].url + '" target="_blank">' + data.projects[i].title + '</a>');
   });
 });
 </script></body></html>
