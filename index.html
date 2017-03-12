@@ -7,21 +7,21 @@ a {color:#EEFF41; text-decoration:none;}
 header {background:url(http://farm3.staticflickr.com/2685/4477836752_c026cc5c34_b.jpg) no-repeat fixed center; background-size:cover; height:700px; color:#fff;}
 .main {background:rgba(200,200,0,0.1); height:100%; text-align:center; padding-top:7em;}
 .container {text-align:left; margin:auto; max-width:800px; line-height:50px;}
-h1 {font-weight:500; font-size:50px; text-shadow:1px 1px 1px #999; margin-bottom:200px;}
-.projects {background:#2196F3; color:#fff; text-align:center; font-size:25px; padding:30px;}
-.projects a {color:#0D47A1;}
+h1 {font-weight:500; font-size:80px; text-shadow:1px 1px 1px #999; margin-bottom:100px;}
+.social {background:#2196F3; color:#fff; text-align:center; font-size:25px; padding:30px;}
+.social a {color:#0D47A1;}
 footer {padding-top:50px; padding-bottom:50px; color:#99979c; text-align:center; background-color:#2a2730; font-size:24px;}
-footer a {letter-spacing:50px;}
+footer a {letter-spacing:30px;}
 </style></head><body><header><div class="main"><div class="container"><h1>Chris Thomas</h1><p>Born and raised on Long Island. Studied computer science and currently works as a <a href="http://linkedin.com/in/christhomas101">developer</a>. I'm avidly interested in code, <a href="http://twitter.com/cthomas1211">tweeting</a>, philosophy, <a href="http://flickr.com/theuiguru">photography</a>, tv/movies, food, golf and basketball.</p>
-</div></div></header><section class="projects"></section>
+</div></div></header><section class="social"></section>
 <footer><p><i class="quote"></i></p><a href="http://github.com/theuiguru">open source me</a></footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script><script type="text/javascript">
 $(function() {
   $.getJSON('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json', function(data) {
     var random = Math.floor(Math.random()*(data.quotes.length));
     $('.quote').html('<i>' + data.quotes[random].quote + '</i>');
-    var i = Math.floor(Math.random()*(data.projects.length));
-    $('.projects').append('A random app I\'ve made: <a href="' + data.projects[i].url + '" target="_blank">' + data.projects[i].title + '</a>');
+    var i = Math.floor(Math.random()*(data.social.length));
+    $('.social').append('A random app I\'ve made: <a href="' + data.social[i].profile_url + '" target="_blank">' + data.social[i].title + '</a>');
   });
 });
 </script></body></html>
