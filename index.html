@@ -21,7 +21,7 @@ $(function() {
     var random = Math.floor(Math.random()*(data.quotes.length));
     $('.quote').html('<i>' + data.quotes[random].quote + '</i>');
     var i = Math.floor(Math.random()*(data.social.length));
-    $('.social').append('A random app I\'ve made: <a href="' + data.social[i].profile_url + '" target="_blank">' + data.social[i].title + '</a>');
+    $('.social').append('Follow me on <a href="' + data.social[i].profile_url + '" target="_blank">' + data.social[i].title + '</a>');
   });
 });
 </script></body></html>
