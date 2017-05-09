@@ -17,11 +17,12 @@ footer a {letter-spacing:10px;}
 <footer><p><i class="quote"></i></p><a href="http://github.com/theuiguru">open source me</a></footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script><script type="text/javascript">
 $(function() {
+  var backgroundColors = ['#ee9825', '#41ce4d', '#c73731', '#5e909b', '#5843c7', '#3a89b5'];
   $.getJSON('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json', function(data) {
     var random = Math.floor(Math.random()*(data.quotes.length));
     $('.quote').html('<i>' + data.quotes[random].quote + '</i>');
     var i = Math.floor(Math.random()*(data.social.length));
-    $('.projects').append('Look what I\'ve built: <a href="' + data.projects[i].url + '" target="_blank">' + data.projects[i].title + '</a>');
+    $('.projects').append('Look what I\'ve built: <a href="' + data.projects[i].url + '" target="_blank">' + data.projects[i].title + '</a>').css('background-color', backgroundColors[i]);
   });
 });
 </script></body></html>
