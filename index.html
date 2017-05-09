@@ -9,7 +9,7 @@ header {background:url(http://farm3.staticflickr.com/2685/4477836752_c026cc5c34_
 .container {text-align:left; margin:auto; max-width:800px; line-height:50px;}
 h1 {font-weight:500; font-size:80px; text-shadow:1px 1px 1px #999; margin-bottom:100px;}
 .projects {background:#2196F3; color:#fff; text-align:center; font-size:25px; padding:30px;}
-.projects a {color:#0D47A1;}
+.projects a {color:#F4FF81;}
 footer {padding:50px 0; color:#99979c; text-align:center; background-color:#2a2730; font-size:24px;}
 footer a {letter-spacing:10px;}
 </style></head><body><header><div class="main"><div class="container"><h1>Chris Thomas</h1><p>Born and raised on Long Island. Studied computer science and currently works as a <a href="http://linkedin.com/in/christhomas101">developer</a>. I'm avidly interested in code, <a href="http://twitter.com/cthomas1211">tweeting</a>, philosophy, <a href="http://flickr.com/theuiguru">photography</a>, tv/movies, food, golf and basketball.</p>
@@ -17,12 +17,13 @@ footer a {letter-spacing:10px;}
 <footer><p><i class="quote"></i></p><a href="http://github.com/theuiguru">open source me</a></footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script><script type="text/javascript">
 $(function() {
-  var backgroundColors = ['#ee9825', '#41ce4d', '#c73731', '#5e909b', '#5843c7', '#3a89b5'];
+  var bgcolors = ['#ee9825', '#41ce4d', '#c73731', '#5e909b', '#5843c7', '#3a89b5'];
   $.getJSON('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json', function(data) {
-    var random = Math.floor(Math.random()*(data.quotes.length));
-    $('.quote').html('<i>' + data.quotes[random].quote + '</i>');
-    var i = Math.floor(Math.random()*(data.social.length));
-    $('.projects').append('Look what I\'ve built: <a href="' + data.projects[i].url + '" target="_blank">' + data.projects[i].title + '</a>').css('background-color', backgroundColors[i]);
+    var q = Math.floor(Math.random()*(data.quotes.length));
+    var p = Math.floor(Math.random()*(data.projects.length));
+    var i = Math.floor(Math.random()*(bgcolors.length));
+    $('.quote').html('<i>' + data.quotes[q].quote + '</i>');
+    $('.projects').append('Look what I\'ve built: <a href="' + data.projects[p].url + '" target="_blank">' + data.projects[p].title + '</a>').css({'background-color': bgcolors[i]});
   });
 });
 </script></body></html>
