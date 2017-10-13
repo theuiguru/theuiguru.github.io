@@ -27,7 +27,7 @@ $(function() {
   
   $.getJSON('https://raw.githubusercontent.com/theuiguru/theuiguru.github.io/master/ponnasseril/cuzinz.json', function(data) {
     $('.cuz').hide();
-    $('#name').on('change', function() {
+    $('#name').on('submit', function() {
       $('.cuz').show();
     });
     var random = Math.floor(Math.random()*(data.cuzinz.length));
