@@ -93,17 +93,15 @@ var cuzinz = [
   },
   {
     "name": "Hannah",
-    "birthday": "09/20"
+    "birthday": "9/20"
   },
   {
     "name": "Christian",
     "birthday": "12/8"
   }
 ];
-
 for(var i=0; i<=cuzinz.length; i++) {
   var today = new Date();
   var now = (today.getMonth()+1) + "/" + today.getDate();
-  if(now<=cuzinz[i].birthday)
-    document.getElementById("cuz").innerHTML = "Happy birthday " + cuzinz[i].name;
+  console.log("Happy birthday " + cuzinz[i].name);
 }
