@@ -17,7 +17,6 @@ section {padding:10px;}
 </style></head><body><div class="bgimg"></div><div class="container"><img id="slide"></div><script type="text/javascript">
 var images = ['https://farm4.staticflickr.com/3837/14653458499_5078507038_b.jpg', 'https://farm5.staticflickr.com/4147/5202169929_8ae5e11278_b.jpg', 'https://farm9.staticflickr.com/8213/8308705647_0f32ff2129_o.jpg', 'https://farm6.staticflickr.com/5575/14817130336_f9bcc19451_o.jpg', 'https://farm5.staticflickr.com/4054/4477834904_d3e4f2565b_b.jpg', 'https://farm6.staticflickr.com/5567/14653458429_c0a6d0fc2d_b.jpg', 'https://c1.staticflickr.com/1/630/20718826106_ba84dd209c_b.jpg', 'https://c1.staticflickr.com/1/775/23271809851_b89355e5db_b.jpg'];
 var n = Math.floor(Math.random() * images.length);
-var time = 1000;
 function changeImg() {
   document.getElementById("slide").setAttribute("src", images[n]);
   if(n<images.length-1) {
@@ -25,7 +24,7 @@ function changeImg() {
   } else {
     n=0;
   }
-  setTimeout("changeImg()", time);
+  setTimeout("changeImg()", 1000);
 }
 changeImg();
 var bgimg = ['https://c2.staticflickr.com/8/7227/7292284120_b6a42f965c_o.jpg', 'https://farm3.staticflickr.com/2868/13681077483_30da59941b_o.jpg', 'https://farm6.staticflickr.com/5567/14653458429_c0a6d0fc2d_b.jpg'];
