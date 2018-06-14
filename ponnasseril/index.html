@@ -27,7 +27,5 @@ function changeImg() {
   setTimeout("changeImg()", 1000);
 }
 changeImg();
-var bgimg = ['https://c2.staticflickr.com/8/7227/7292284120_b6a42f965c_o.jpg', 'https://farm3.staticflickr.com/2868/13681077483_30da59941b_o.jpg', 'https://farm6.staticflickr.com/5567/14653458429_c0a6d0fc2d_b.jpg'];
-var b = Math.floor(Math.random() * bgimg.length);
-document.querySelector(".bgimg").style.backgroundImage = 'url(' + bgimg[b] + ')';
+document.querySelector(".bgimg").style.backgroundImage = 'url(' + images[n] + ')';
 </script></body></html>
