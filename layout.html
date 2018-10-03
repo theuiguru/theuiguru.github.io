@@ -36,11 +36,15 @@ ul li a:hover {color:#ffd600;}
     </ul>
   </header>
   <section><h1><i class="fa fa-hand-spock-o" aria-hidden="true"></i> Hello, there!</h1>
-    <article id="blog">Microblog  section coming soon...</article>
+    <article class="blog">Microblog  section coming soon...</article>
+    <article class="quote"></article>
   </section>
 </div>
 <script>
 fetch('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json')
   .then(res => res.json())//response type
-  .then(data => console.log(data)); //log the data;  
+  .then(function(data) {
+    var q = Math.floor(Math.random()*(data.quotes.length));
+		document.querySelector('.quote').innerHTML = data.quotes[q].quote;
+	}); //log the data;  
 </script></body></html>
