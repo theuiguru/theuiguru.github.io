@@ -13,7 +13,7 @@ h1 {padding-bottom:0.3em; border-bottom:1px dotted #eaecef; font-size:2.2rem; fo
 h1 > i.fa-hand-spock-o {color:#03a9f4;}
 ul {padding:0;}
 ul li {list-style:none; display:inline; margin-right:5px;}
-ul li a {font-size:2rem; color:#263238;}
+ul li a, a {font-size:2rem; color:#B0BEC5; text-decoration:none;}
 ul li a:hover {color:#ffd600;}
 article {margin-bottom:2em;}
 @media(max-width:768px) {
@@ -22,7 +22,7 @@ article {margin-bottom:2em;}
   img.me {filter:none; -webkit-filter:none;}
   ul li {margin:0 10px;}
 }
-</style></head><body>
+</style></head><body><div class="main">
 <div class="container">
   <header><img class="me" src="https://avatars3.githubusercontent.com/u/1563057?s=460&v=4">
     <p>Born and raised on Long Island, New York. Studied computer science and currently works as a developer/analyst. Avidly interested in code, tweeting, philosophy, mobilography, tv/movies, food, golf, tennis, and basketball.</p>
@@ -43,7 +43,7 @@ article {margin-bottom:2em;}
     <article class="blog"></article>
   </section>
 </div>
-<script>
+</div><script>
 fetch('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json')
   .then(res => res.json())//response type
   .then(function(data) {
