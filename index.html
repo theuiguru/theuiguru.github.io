@@ -1,29 +1,73 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"><meta name="Keywords" content="chris thomas, ct, cquery, cthomas, southasiangeek" />
-<meta name="Description" content="Every protagonist of every story, show, or movie is the story of my life." />
-<meta name="Author" content="Chris Thomas" />
-<link rel="icon" href="favicon.png"><title>Think Bright, Think CT!</title><style type="text/css">
-html, body {margin:0; padding:0; font-family:Arial, sans-serif; font-size:18px; position:relative; min-height:100vh;}
-a {color:#EEFF41; text-decoration:none;}
-header {background:url(http://farm3.staticflickr.com/2685/4477836752_c026cc5c34_b.jpg) no-repeat fixed center; background-size:cover; height:700px; color:#fff;}
-.main {background:rgba(0,0,0,0.3); height:100%; text-align:center; padding-top:7em;}
-.container {margin:auto; max-width:800px; line-height:50px; border-radius:5px; padding:30px;}
-h1 {font-weight:500; font-size:80px; text-shadow:1px 1px 1px #999; margin-bottom:100px;}
-.projects {background:#2196F3; color:#fff; text-align:center; font-size:25px; padding:30px;}
-.projects a {color:#F4FF81;}
-footer {padding:50px 0; color:#99979c; text-align:center; background-color:#2a2730; font-size:24px;}
-footer a {letter-spacing:10px;}
-</style></head><body><header><div class="main"><div class="container"><h1>Chris Thomas</h1><p>Born and raised on Long Island. Studied computer science and currently works as a <a href="http://linkedin.com/in/christhomas101">developer</a>. I'm avidly interested in code, <a href="http://twitter.com/cthomas1211">tweeting</a>, philosophy, <a href="http://flickr.com/theuiguru">photography</a>, tv/movies, food, golf and basketball.</p>
-</div></div></header><section class="projects"></section>
-<footer><p><i class="quote"></i></p><a href="http://github.com/theuiguru">open source me</a></footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script><script type="text/javascript">
-$(function() {
-  var bgcolors = ['#F44336', '#FFA000', '#00C853', '#2196F3', '#7C4DFF'];
-  $.getJSON('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json', function(data) {
-    var q = Math.floor(Math.random()*(data.quotes.length));
-    var p = Math.floor(Math.random()*(data.projects.length));
-    var i = Math.floor(Math.random()*(bgcolors.length));
-    $('.quote').html('<i>' + data.quotes[q].quote + '</i>');
-    $('.projects').append('Look what I\'ve built: <a href="' + data.projects[p].url + '" target="_blank">' + data.projects[p].title + '</a>').css({'background-color': bgcolors[i]});
-  });
-});
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="Keywords" content="chris thomas, ct, cquery, cthomas, southasiangeek">
+<meta name="Description" content="Every protagonist of every story, show, or movie is the story of my life.">
+<meta name="Author" content="Chris Thomas"><title>Think Bright, Think CT!</title>
+<link rel="icon" href="favicon.png">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><style type="text/css">
+*, *:before, *:after {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+html, body {margin:0; padding:0; line-height:1.3; color:#263238; font-size:18px; font-family:Arial, Helvetica, sans-serif; background:url(https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg) no-repeat center fixed; background-size:cover; color:#fff;}
+.main {background:rgba(0,0,0,0.5); height:100%; min-height:100vh;}
+.container {margin:auto; max-width:900px; display:grid; grid-template-columns:30% 70%; grid-gap:1em; padding-top:2em;}
+img.me {width:100%; max-width:100px; border-radius:30px; filter:grayscale(1); -webkit-filter:grayscale(1);} img.me:hover {filter:grayscale(0); -webkit-filter:grayscale(0);}
+h1 {padding-bottom:0.3em; border-bottom:1px dotted #eaecef; font-size:2.2rem; font-weight:500;}
+h1 > i.fa-hand-spock-o {color:#03a9f4;}
+ul {padding:0;}
+ul li {list-style:none; display:inline; margin-right:5px;}
+ul li a, a {font-size:1.8rem; color:#B0BEC5; text-decoration:none;}
+ul li a:hover {color:#ffd600;}
+article {margin-bottom:2em;}
+article.blog {height:100vh; overflow-y:scroll;}
+aside.location {position:fixed; top:0; z-index:1; width:100%; height:20px; text-align:center; background:rgba(249,72,119,0.5); font-size:14px;}
+@media(max-width:768px) {
+  .container {grid-template-columns:1fr;}
+  header {text-align:center;}
+  img.me {filter:none; -webkit-filter:none;}
+  ul li {margin:0 10px;}
+}
+</style></head><body><div class="main"><aside class="location"></aside>
+<div class="container">
+  <header><img class="me" src="https://avatars3.githubusercontent.com/u/1563057?s=460&v=4">
+    <p>Born and raised on Long Island, New York. Studied computer science and currently works as a developer/analyst. Avidly interested in code, tweeting, philosophy, mobilography, tv/movies, food, golf, tennis, and basketball.</p>
+    <p>Previously at Northwell Health, Microsoft, NYIT</p>
+    <p>Open to opportunities: webmaster102 at gmail</p>
+    <ul>
+      <li><a href="http://codepen.io/cthomas"><i class="fa fa-codepen"></i></a></li>
+      <li><a href="http://medium.com/@cthomas1211"><i class="fa fa-medium"></i></a></li>
+      <li><a href="http://twitter.com/cthomas1211"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="http://instagr.am/cthomas1211"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://foursquare.com/cthomas1211"><i class="fa fa-foursquare"></i></a></li>
+      <li><a href="http://github.com/theuiguru"><i class="fa fa-github"></i></a></li>
+      <li><a href="http://linkedin.com/in/christhomas101"><i class="fa fa-linkedin"></i></a></li>
+    </ul>
+    <article class="project"></article>
+    <article class="quote"></article>
+  </header>
+  <section><h1><i class="fa fa-hand-spock-o" aria-hidden="true"></i> Hello, there!</h1>
+    <article class="blog"></article>
+  </section>
+</div>
+</div><script>
+fetch('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json')
+  .then(res => res.json())//response type
+  .then(function(data) {
+     var q = Math.floor(Math.random()*(data.quotes.length));
+     var p = Math.floor(Math.random()*(data.projects.length));
+     document.querySelector('.quote').innerHTML = data.quotes[q].quote;
+     document.querySelector('.project').innerHTML = 'Look what I\'ve built:<br><a href="' + data.projects[p].url + '" target="_blank">' + data.projects[p].title + '</a>';
+  }); //log the data;
+fetch('https://api.foursquare.com/v2/users/self/checkins?&oauth_token=3FLJTHPL4OHWMZO2G2DGJ2HPAJJPTPVCW0EEZX12PKV32GBS&v=20130312')
+  .then(res => res.json())//response type
+  .then((data) => { 
+	var places = data.response.checkins.items;
+	for(var i=0; i<1; i++) {
+		document.querySelector('.location').innerHTML += 'Last seen in: ' + places[i].venue.location.city + ', ' + places[i].venue.location.state + '</p>';
+    }
+   }); //log the data;
+var colors = ['#F44336', '#FFA000', '#00C853', '#2196F3', '#7C4DFF'];
+var active = 0;
+setInterval(function(){
+    document.querySelector('.project a').style.color = colors[active];
+    active++;
+    if (active == colors.length) active = 0;
+}, 1000);
 </script></body></html>
