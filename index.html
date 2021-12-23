@@ -44,7 +44,7 @@ fetch('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json')
   .then((data) => {
      let q = Math.floor(Math.random()*(data.quotes.length));
      let p = Math.floor(Math.random()*(data.projects.length));
-     document.querySelector('.quote').textContent = data.quotes[q].quote;
+     document.querySelector('.quote').innerText = data.quotes[q].quote;
      document.querySelector('.project').innerHTML = 'Look what I\'ve built:<br><a href="' + data.projects[p].url + '" target="_blank">' + data.projects[p].title + '</a>';
   });
 fetch('https://api.foursquare.com/v2/users/self/checkins?&oauth_token=3FLJTHPL4OHWMZO2G2DGJ2HPAJJPTPVCW0EEZX12PKV32GBS&v=20130312')
@@ -52,7 +52,7 @@ fetch('https://api.foursquare.com/v2/users/self/checkins?&oauth_token=3FLJTHPL4O
   .then((data) => { 
 	let places = data.response.checkins.items;
 	for(let i=0; i<1; i++) {
-	  document.querySelector('.location').textContent += 'Last seen in: ' + places[i].venue.location.city + ', ' + places[i].venue.location.state;
+	  document.querySelector('.location').innerText += 'Last seen in: ' + places[i].venue.location.city + ', ' + places[i].venue.location.state;
 	}
   });
 </script></body></html>
