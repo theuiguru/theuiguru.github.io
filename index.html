@@ -52,7 +52,7 @@ fetch('https://api.foursquare.com/v2/users/self/checkins?&oauth_token=3FLJTHPL4O
   .then((data) => { 
 	let places = data.response.checkins.items;
 	for(let i=0; i<1; i++) {
-	  document.querySelector('.location').innerText += `Last seen in: ${places[i].venue.location.city}, ${places[i].venue.location.state}`;
+	  document.querySelector('.location').innerText += `Last seen in ${places[i].venue.location.city}, ${places[i].venue.location.state}`;
 	}
   });
 </script></body></html>
