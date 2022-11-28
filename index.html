@@ -39,16 +39,14 @@ nav.location {position:fixed; top:0; z-index:1; width:100%; height:20px; text-al
   </header>
   <section><h1>🖖 Hello, there!</h1></section>
 </div></main><script>
-fetch('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json')
-.then(res => res.json())
+fetch('https://raw.githubusercontent.com/theuiguru/api.ct/master/index.json').then(res => res.json())
 .then((data) => {
   let q = Math.floor(Math.random()*(data.quotes.length));
   let p = Math.floor(Math.random()*(data.projects.length));
   document.querySelector('.quote').textContent = data.quotes[q].quote;
   document.querySelector('.project').innerHTML = `Look what I\'ve built:<br><a href="${data.projects[p].url}" target="_blank"> ${data.projects[p].title} </a>`;
 });
-fetch('https://api.foursquare.com/v2/users/self/checkins?&oauth_token=3FLJTHPL4OHWMZO2G2DGJ2HPAJJPTPVCW0EEZX12PKV32GBS&v=20130312')
-.then(res => res.json())
+fetch('https://api.foursquare.com/v2/users/self/checkins?&oauth_token=3FLJTHPL4OHWMZO2G2DGJ2HPAJJPTPVCW0EEZX12PKV32GBS&v=20130312').then(res => res.json())
 .then((data) => {
   let places = data.response.checkins.items;
   for(let i=0; i<1; i++) {
