@@ -9,3 +9,5 @@ theuiguru.github.io
 5. "If Someone's happiness is your happiness, then you really love them."
 6. "Be the person you want to find. Don't be a nickel out here looking for a dime."
 7. ASAP! Always Say A Prayer: "God, our Father, If it is your will, walk through my house and take away all my worries and illnesses and please watch over and heal my family in Jesus name, Amen."
+8. Persistence. Patience. Passion.
+9. Replicate. Reuse. Reiterate.
