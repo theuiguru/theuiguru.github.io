@@ -8,9 +8,8 @@ html, body {margin:0; padding:0; line-height:1.3; color:#263238; font-size:18px;
 main {background:rgba(0,0,0,0.5); height:100%; min-height:100vh;}
 .container {margin:auto; max-width:900px; display:grid; grid-template-columns:1fr 2fr; grid-gap:1em; padding-top:2em;}
 img.me {width:100%; max-width:100px; border-radius:30px; filter:grayscale(1); -webkit-filter:grayscale(1); transition:transform .2s;} img.me:hover {filter:grayscale(0); -webkit-filter:grayscale(0); transform:scale(1.2);}
-h1 {padding-bottom:0.3em; font-size:2.2rem; font-weight:500; animation:typing 2s steps(20) infinite; height:50px; overflow-x:hidden;}
+h1 {padding-bottom:0.3em; font-size:2.2rem; font-weight:500; animation:typing 2s steps(25) infinite; height:50px; overflow-x:hidden;}
 .border {border-bottom:1px dotted #eaecef;}
-@keyframes typing { from {width:0;} to {width:100%;} }
 ul {padding:0;} ul li {list-style:none; display:inline; margin-right:5px;}
 ul li a, a {font-size:1.5rem; color:#B0BEC5; text-decoration:none;}
 ul li a:hover {color:#ffd600;}
@@ -19,6 +18,7 @@ aside.location {position:fixed; top:0; z-index:1; width:100%; height:20px; text-
 .quote {font-style:italic;}
 .project a {animation:colorChange 2s infinite;}
 @keyframes colorChange { 0% {color:#F44336;} 25% {color:#FFA000;} 50% {color:#00C853;} 75% {color:#2196F3;} 100% {color:#7C4DFF;} }
+@keyframes typing { from {width:0;} to {width:100%;} }
 @media (max-width:768px) { 
   .container {grid-template-columns:1fr;} header {text-align:center; padding:3px;} img.me {filter:none; -webkit-filter:none;} ul li {margin:0 5px;}
 }
