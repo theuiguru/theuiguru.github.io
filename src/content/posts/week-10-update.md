@@ -1,0 +1,6 @@
+---
+title: "Week 10 Update!"
+pubDate: "2009-11-16T17:26:00.010-05:00"
+---
+
+This past week was a decent week as well, didn't do much except classes and attend campus men's ministry. Yesterday, actually one of my cousins, Anita, from Philly came over, because there was a diocesan meeting of some sort in New York. Don't really concentrate on my "CUZINZ" fantasy football league anymore since I've been losing like every week (as of now 2 wins-10 losses). So, overall I had another decent weekly turnout.<br /><br />Also, I was actually browsing though youtube about The Office's Jim Halpert (aka John Krasinski), here's a video about an interview of office romances, with John Krasinski and Jenna Fischer on <em>The Today Show</em>. By far, the best type of romance there ever was, that's how a guy would do it.<br /><br /><object width="400" height="340"><param name="movie" value="http://www.youtube.com/v/9oiWtRKdEcU&hl=en_US&fs=1&color1=0x3a3a3a&color2=0x999999"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/9oiWtRKdEcU&hl=en_US&fs=1&color1=0x3a3a3a&color2=0x999999" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="400" height="340"></embed></object>

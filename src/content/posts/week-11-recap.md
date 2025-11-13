@@ -1,0 +1,6 @@
+---
+title: "Week 11 Recap!"
+pubDate: "2009-11-23T15:45:00.006-05:00"
+---
+
+What can I say about Week 11 is that I went to the Intervarsity Christian fellowship Thanksgiving dinner this past Wednesday night at NYIT. It was pretty good with the praise skits, songs, and an awesome freestyle Christian rapper. So anyway, on Friday night, went to one of my church friend's house to chill, hangout, and go grab some food from Taco Bell for dinner, because of my sister's movie plans were cancelled due to some situations going on at the Roosevelt Field mall, where Justin Bieber (did not know him until that day) was supposed to perform. But eventually she got her tickets back and saw it on Sunday.<br /><br />On Saturday, just spent some time at my cousins', Justin and Alex's, house watching tv and movies and an episode of The Office. Yesterday, went to church, then went to a church member's housewarming, later went to my other cousins', Shanu and Sherry's, house to do some work. A while later that night, went to my cousin's, Bavan's, house for the monthly family prayer meeting. Overall, I had a pretty awesome week and cannot wait for Thanksgiving and the family getaway reunion this week...should be really fun!

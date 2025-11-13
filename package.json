@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.15.5"
+    "astro": "^5.15.5",
+    "node-fetch": "^3.3.2"
   }
 }

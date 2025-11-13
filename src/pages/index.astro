@@ -1,11 +1,21 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { parsePubDate, formatPubDate } from "../utils/date.js";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+let posts = await getCollection("posts");
+posts = posts.sort(
+  (a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate)
+);
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout>
+  <ul class="blog-list">
+    {posts.map(post => (
+      <li>
+        <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+        <span class="pub-date">{formatPubDate(post.data.pubDate, 'en-US', 'short')}</span>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
