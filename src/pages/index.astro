@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { parsePubDate, formatPubDate } from "../utils/date.js";
+
+let posts = await getCollection("posts");
+posts = posts.sort(
+  (a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate)
+);
+---
+
+<BaseLayout>
+  <ul class="blog-list">
+    {posts.map(post => (
+      <li>
+        <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+        <span class="pub-date">{formatPubDate(post.data.pubDate, 'en-US', 'short')}</span>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

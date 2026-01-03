@@ -1,0 +1,6 @@
+---
+title: "Week 3 Update!"
+pubDate: "2010-01-24T20:32:00.004-05:00"
+---
+
+This past week was a little overwhelming for me considering that I went to work everyday and did the usual there. Then, went over to SUNY Old Westbury college to register for classes and such. Also, yesterday and today, just stayed at home and watched my favorite shows on hulu and movies on tbs. Plus, watched today's NFL-AFC championship game with my all-time favorite team, the NY Jets, and Indianapolis Colts, it was kind of awkward for me regarding that I had both teams as part of my defense on my fantasy team last season.<br /><br />So anyway, like I've said in my previous blogposts, I've been very much fond of twitter and its history. Here's a video I found on youtube with twitter's co-founders on <em>The View</em>.<br /><br /><object width="400" height="300"><param name="movie" value="http://www.youtube-nocookie.com/v/UwQTAmPFaWQ&hl=en_US&fs=1&color1=0x3a3a3a&color2=0x999999"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube-nocookie.com/v/UwQTAmPFaWQ&hl=en_US&fs=1&color1=0x3a3a3a&color2=0x999999" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="400" height="300"></embed></object>
