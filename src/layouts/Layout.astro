@@ -1,0 +1,39 @@
+---
+// src/layouts/BaseLayout.astro
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Think Bright, Think CT!</title>
+    <link rel="icon" href="/favicon.png" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <header><a href="/"><img class="me" alt="Chris Thomas" title="Chris Thomas" src="https://avatars3.githubusercontent.com/u/1563057?s=460&v=4"></a>
+        <p>Born and raised on Long Island. Studied computer science and currently works as a programmer/analyst. Avidly interested in technology, fitness, family, faith, philosophy, entertainment, golf and pickleball.</p>
+        <ul><li><a href="http://theuiguru.blogspot.com" target="_blank"><i class="fab fa-blogger"></i></a></li>
+        <li><a href="https://bsky.app/profile/cthomas.bsky.social" target="_blank"><i class="fab fa-bluesky"></i></a></li>
+        <li><a href="http://codepen.io/cthomas" target="_blank"><i class="fab fa-codepen"></i></a></li>
+        <li><a href="http://flic.kr/theuiguru" target="_blank"><i class="fab fa-flickr"></i></a></li>
+        <li><a href="http://github.com/theuiguru" target="_blank"><i class="fab fa-github"></i></a></li>
+        <li><a href="http://instagr.am/cthomas1211" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="http://linkedin.com/in/christhomas101" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://twitter.com/cthomas1211" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="http://youtube.com/ndnweb24" target="_blank"><i class="fab fa-youtube"></i></a></li></ul>
+        <aside class="project"></aside><aside class="quote"></aside></header>
+
+        <section>
+          <h1>🖖 Hi, there!</h1><div class="border"></div>
+          <slot />
+        </section>
+      </div>
+    </main>
+
+    <script src="/script.js" defer></script>
+  </body>
+</html>

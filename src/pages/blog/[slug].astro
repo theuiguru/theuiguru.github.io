@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { formatPubDate } from "../../utils/date.js";
+
+// 1. Tell Astro which slugs exist
+export async function getStaticPaths() {
+  const posts = await getCollection("posts");
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+// 2. Get the current post
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<BaseLayout>
+  <article>
+    <h2>{post.data.title}</h2>
+    <p>{formatPubDate(post.data.pubDate)}</p>
+    <p class="border"></p>
+    <Content />
+  </article>
+  <p class="back-link"><a href="/">← Back to blog</a></p>
+</BaseLayout>

@@ -1,0 +1,6 @@
+---
+title: "The Madness has begun!"
+pubDate: "2010-03-14T19:14:00.009-04:00"
+---
+
+This past week was going smoothly for me considering classes went well, midterms are steadily approaching, and lent is also coming to an end with Holy Passion Week coming up. Anyway, just spent the time redesigning my blog's code, watching a couple of NCAA games and today's selection show for March Madness, and actually checking out other blogs dealt with computer science topics. Especially one came to mind when reading several posts with the following tags of <a href="http://www.nczonline.net/blog/tag/javascript/" target="_blank">javascript</a> quizzes and <a href="http://www.nczonline.net/blog/tag/computer-science/" target="_blank">computer science</a> written by from one of Yahoo's developers, Nicholas C. Zakas.<br /><br />Anyway regarding the NCAA tournament coverage, just setting up my brackets before the games on Yahoo! Tournament Pick'em, still can't believe UNC is not in it anymore since Tyler Hansborough is already drafted in the NBA, there happens to be no more magic for that team I guess for this year.<br /><br />Oh yeah by the way, HAPPY PI DAY to all my math geeks! 3.1415926535 and that's all I know especially when's it's already plugged in the calculator

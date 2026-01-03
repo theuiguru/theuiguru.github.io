@@ -1,0 +1,6 @@
+---
+title: "Spring Break '10"
+pubDate: "2010-04-05T16:13:00.004-04:00"
+---
+
+So this past week my official spring break off from school, which also happened to be during Holy Week as well. The beginning was mentioned before in the last post as I've went to church for the Passion week services. Over the weekend on Saturday night, went to the movies at Broadway Mall and saw "How to train a Dragon" in 3D with the cuzinz, and really enjoyed a lot. Then yesterday, which was Easter Sunday, got to church extra early at like 5:45 in the morning. After church, relaxed at home a bit, then went off to Syosset for the family easter party, which was pretty fun as well. Anyway, I've had a pretty awesome week.<br /><br />By the way, I've also seen the trailer to this movie that I'm really looking forward to watching called "Despicable Me" with Steve Carell.<br /><object width="400" height="300"><param name="movie" value="http://www.youtube.com/v/DsiayV5LuD0&hl=en_US&fs=1&color1=0x3a3a3a&color2=0x999999"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/DsiayV5LuD0&hl=en_US&fs=1&color1=0x3a3a3a&color2=0x999999" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="400" height="300"></embed></object>
